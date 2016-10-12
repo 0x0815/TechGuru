@@ -32,12 +32,27 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
         }
     }
     
-    func numberOfRows(in tableView: NSTableView) -> Int {
+    func numberOfRowsInTableView(aTableView: NSTableView!) -> Int{
         return status.count
     }
     
-    func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
-        <#code#>
+    func tableView(tableView: NSTableView!, objectValueForTableColumn tableColumn: NSTableColumn!, row: Int) -> Any!
+    {
+       // if ((tableColumn.identifier) == "status"){
+            //return array atindexrow
+            
+        }else{
+            
+            //return something
+        }
+        
+        //return Any maybe anyObject;
+    }
+    
+    func tableView(tableView: NSTableView, setObjectValue object: AnyObject?, forTableColumn tableColumn: NSTableColumn?, row: Int)
+    {
+        
+        //need !
     }
 
 }
