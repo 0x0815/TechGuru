@@ -500,6 +500,7 @@
 				D246ACA51DAD6F21008951E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D246ACA61DAD6F21008951E4 /* Build configuration list for PBXNativeTarget "TechGuruTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +509,7 @@
 				D246ACA81DAD6F21008951E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D246ACA91DAD6F21008951E4 /* Build configuration list for PBXNativeTarget "TechGuruUITests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +518,7 @@
 				D246ACAB1DAD6F21008951E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
