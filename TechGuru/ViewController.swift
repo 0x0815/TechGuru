@@ -11,13 +11,13 @@ import Cocoa
 class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate, NSWindowDelegate {
 
     @IBOutlet weak var tableView: NSTableView!
-    @IBOutlet weak var newDataTextField: NSTextField!
     
     let data:[NSMutableDictionary] = [["status": "1", "dayin": "01.10.2016", "sp_nummer": "SP34009854", "customername": "Hans Harry Müller", "article": "MacBook Pro 15", "errordesciption": "Total im Arsch"]]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
     }
 
     override var representedObject: Any? {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2548a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
@@ -170,7 +170,7 @@
         <!--Window Controller-->
         <scene sceneID="lOd-he-e3O">
             <objects>
-                <windowController id="yxk-nj-duM" sceneMemberID="viewController">
+                <windowController id="yxk-nj-duM" customClass="AddNew" sceneMemberID="viewController">
                     <window key="window" title="Paste data here" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="KVV-Bs-gR9">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
                         <rect key="contentRect" x="425" y="461" width="800" height="350"/>
@@ -192,7 +192,7 @@
         <!--View Controller-->
         <scene sceneID="0Ub-zd-1iu">
             <objects>
-                <viewController id="bDT-ja-vO6" customClass="ViewController" customModule="TechGuru" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bDT-ja-vO6" sceneMemberID="viewController">
                     <view key="view" id="9NQ-MB-R7y">
                         <rect key="frame" x="0.0" y="0.0" width="800" height="350"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -206,14 +206,11 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                                 <connections>
-                                    <outlet property="delegate" destination="bDT-ja-vO6" id="4ew-9w-LjE"/>
+                                    <outlet property="delegate" destination="bDT-ja-vO6" id="LzR-U8-0Js"/>
                                 </connections>
                             </textField>
                         </subviews>
                     </view>
-                    <connections>
-                        <outlet property="newDataTextField" destination="d3j-50-xAG" id="LAz-rC-soc"/>
-                    </connections>
                 </viewController>
                 <customObject id="Wqj-2r-IKE" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
