@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2548a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
@@ -192,22 +192,28 @@
         <!--View Controller-->
         <scene sceneID="0Ub-zd-1iu">
             <objects>
-                <viewController id="bDT-ja-vO6" sceneMemberID="viewController">
+                <viewController id="bDT-ja-vO6" customClass="ViewController" customModule="TechGuru" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="9NQ-MB-R7y">
                         <rect key="frame" x="0.0" y="0.0" width="800" height="350"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d3j-50-xAG">
-                                <rect key="frame" x="0.0" y="0.0" width="800" height="350"/>
+                                <rect key="frame" x="20" y="20" width="760" height="310"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="0FZ-EJ-XSM">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <outlet property="delegate" destination="bDT-ja-vO6" id="4ew-9w-LjE"/>
+                                </connections>
                             </textField>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="newDataTextField" destination="d3j-50-xAG" id="LAz-rC-soc"/>
+                    </connections>
                 </viewController>
                 <customObject id="Wqj-2r-IKE" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
