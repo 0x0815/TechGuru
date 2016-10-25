@@ -43,7 +43,7 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     }
     
     func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
-        return data
+        return nil
     }
     
     func windowWillClose(_ notification: Notification) {
