@@ -14,7 +14,12 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     @IBOutlet weak var addNewDataTextField: NSTextField!
     @IBOutlet weak var addNewDataButton: NSButton!
 
-    let data:[NSDictionary] = [["status": "1", "dayin": "01.10.2016", "spnumber": "SP34009854", "customername": "Hans Harry Müller", "article": "MacBook Pro 15", "errordescription": "Total im Arsch"]]
+    let data:[NSDictionary] = [["status": "1", "dayin": "01.10.2016", "spnumber": "SP34009854", "customername": "Hans Harry Müller", "article": "MacBook Pro 15", "errordescription": "Total im Arsch"],
+                               ["status": "10", "dayin": "01.10.2016", "spnumber": "SP34009854", "customername": "Hans Harry Müller", "article": "MacBook Pro 15", "errordescription": "Total im Arsch"],
+                               ["status": "60", "dayin": "01.10.2016", "spnumber": "SP34009854", "customername": "Hans Harry Müller", "article": "MacBook Pro 15", "errordescription": "Total im Arsch"],
+                               ["status": "60", "dayin": "01.10.2016", "spnumber": "SP34009854", "customername": "Hans Harry Müller", "article": "MacBook Pro 15", "errordescription": "Total im Arsch"],
+                               ["status": "70", "dayin": "01.10.2016", "spnumber": "SP34009854", "customername": "Hans Harry Müller", "article": "MacBook Pro 15", "errordescription": "Total im Arsch"],
+                               ["status": "90", "dayin": "01.10.2016", "spnumber": "SP34009854", "customername": "Hans Harry Müller", "article": "MacBook Pro 15", "errordescription": "Total im Arsch"]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
