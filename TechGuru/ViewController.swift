@@ -11,6 +11,8 @@ import Cocoa
 class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate, NSWindowDelegate {
 
     @IBOutlet weak var tableView: NSTableView!
+    @IBOutlet weak var addNewDataTextField: NSTextField!
+    @IBOutlet weak var addNewDataButton: NSButton!
     
     let data:[NSMutableDictionary] = [["status": "1", "dayin": "01.10.2016", "sp_nummer": "SP34009854", "customername": "Hans Harry Müller", "article": "MacBook Pro 15", "errordesciption": "Total im Arsch"]]
 
@@ -26,9 +28,22 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
             
         }
     }
+
+    @IBAction func addNewDataButtonAction(_ sender: AnyObject) {
+        //print(addNewDataTextField.objectValue)
+        let data: String = addNewDataTextField.objectValue as! String
+        let newData = data.replacingOccurrences(of: "\"", with: "")
+        let csv = CSwiftV(with: newData, separator: ";")
+        dump(csv.keyedRows)
+
+    }
     
-    func numberOfRowsInTableView(aTableView: NSTableView!) -> Int{
+    func numberOfRows(in tableView: NSTableView) -> Int {
         return data.count
+    }
+    
+    func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
+        return data
     }
     
     func windowWillClose(_ notification: Notification) {

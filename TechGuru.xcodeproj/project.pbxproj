@@ -14,6 +14,10 @@
 		D246AC891DAD6F21008951E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D246AC871DAD6F21008951E4 /* Main.storyboard */; };
 		D246AC941DAD6F21008951E4 /* TechGuruTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D246AC931DAD6F21008951E4 /* TechGuruTests.swift */; };
 		D246AC9F1DAD6F21008951E4 /* TechGuruUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D246AC9E1DAD6F21008951E4 /* TechGuruUITests.swift */; };
+		D2A1CF551DB6CB5E00D34662 /* cases in Resources */ = {isa = PBXBuildFile; fileRef = D2A1CF541DB6CB5E00D34662 /* cases */; };
+		D2A1CF911DB6D61B00D34662 /* CSwiftV.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1CF901DB6D61B00D34662 /* CSwiftV.swift */; };
+		D2A1CF981DB6DE1F00D34662 /* Cases+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1CF961DB6DE1F00D34662 /* Cases+CoreDataClass.swift */; };
+		D2A1CF991DB6DE1F00D34662 /* Cases+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1CF971DB6DE1F00D34662 /* Cases+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		D246AC9A1DAD6F21008951E4 /* TechGuruUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TechGuruUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D246AC9E1DAD6F21008951E4 /* TechGuruUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechGuruUITests.swift; sourceTree = "<group>"; };
 		D246ACA01DAD6F21008951E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2A1CF541DB6CB5E00D34662 /* cases */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cases; sourceTree = "<group>"; };
+		D2A1CF901DB6D61B00D34662 /* CSwiftV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSwiftV.swift; path = "../../../Downloads/CSwiftV-master/Sources/CSwiftV.swift"; sourceTree = "<group>"; };
+		D2A1CF961DB6DE1F00D34662 /* Cases+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cases+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D2A1CF971DB6DE1F00D34662 /* Cases+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cases+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +105,16 @@
 		D246AC7D1DAD6F21008951E4 /* TechGuru */ = {
 			isa = PBXGroup;
 			children = (
+				D2A1CF961DB6DE1F00D34662 /* Cases+CoreDataClass.swift */,
+				D2A1CF971DB6DE1F00D34662 /* Cases+CoreDataProperties.swift */,
+				D2A1CF901DB6D61B00D34662 /* CSwiftV.swift */,
 				D246AC7E1DAD6F21008951E4 /* AppDelegate.swift */,
 				D246AC801DAD6F21008951E4 /* ViewController.swift */,
 				D246AC851DAD6F21008951E4 /* Assets.xcassets */,
 				D246AC871DAD6F21008951E4 /* Main.storyboard */,
 				D246AC8A1DAD6F21008951E4 /* Info.plist */,
 				D246AC821DAD6F21008951E4 /* TechGuru.xcdatamodeld */,
+				D2A1CF541DB6CB5E00D34662 /* cases */,
 			);
 			path = TechGuru;
 			sourceTree = "<group>";
@@ -193,6 +205,7 @@
 				TargetAttributes = {
 					D246AC7A1DAD6F20008951E4 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 65Q4MJ3SHR;
 						ProvisioningStyle = Automatic;
 					};
 					D246AC8E1DAD6F21008951E4 = {
@@ -232,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2A1CF551DB6CB5E00D34662 /* cases in Resources */,
 				D246AC861DAD6F21008951E4 /* Assets.xcassets in Resources */,
 				D246AC891DAD6F21008951E4 /* Main.storyboard in Resources */,
 			);
@@ -259,7 +273,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D246AC811DAD6F21008951E4 /* ViewController.swift in Sources */,
+				D2A1CF991DB6DE1F00D34662 /* Cases+CoreDataProperties.swift in Sources */,
 				D246AC7F1DAD6F21008951E4 /* AppDelegate.swift in Sources */,
+				D2A1CF911DB6D61B00D34662 /* CSwiftV.swift in Sources */,
+				D2A1CF981DB6DE1F00D34662 /* Cases+CoreDataClass.swift in Sources */,
 				D246AC841DAD6F21008951E4 /* TechGuru.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,10 +418,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 65Q4MJ3SHR;
 				INFOPLIST_FILE = TechGuru/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.dontplayalone.TechGuru;
+				PRODUCT_BUNDLE_IDENTIFIER = net.acrowdapart.techguru;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -414,10 +433,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 65Q4MJ3SHR;
 				INFOPLIST_FILE = TechGuru/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.dontplayalone.TechGuru;
+				PRODUCT_BUNDLE_IDENTIFIER = net.acrowdapart.techguru;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

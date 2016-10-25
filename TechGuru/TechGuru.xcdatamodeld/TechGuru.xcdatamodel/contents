@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="16B2548a" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Cases" representedClassName=".Cases" syncable="YES">
+        <attribute name="article" attributeType="String" syncable="YES"/>
+        <attribute name="customermail" attributeType="String" syncable="YES"/>
+        <attribute name="customername" attributeType="String" syncable="YES"/>
+        <attribute name="customernumber" attributeType="String" syncable="YES"/>
+        <attribute name="dayin" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="errordescription" attributeType="String" syncable="YES"/>
+        <attribute name="serialnumber" attributeType="String" syncable="YES"/>
+        <attribute name="spnumber" attributeType="String" syncable="YES"/>
+        <attribute name="status" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="technician" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Cases" positionX="-54" positionY="-9" width="128" height="195"/>
+    </elements>
 </model>
