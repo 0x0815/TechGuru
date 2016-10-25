@@ -13,9 +13,9 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     @IBOutlet weak var tableView: NSTableView!
     @IBOutlet weak var addNewDataTextField: NSTextField!
     @IBOutlet weak var addNewDataButton: NSButton!
-    
-    let data:[NSMutableDictionary] = [["status": "1", "dayin": "01.10.2016", "sp_nummer": "SP34009854", "customername": "Hans Harry Müller", "article": "MacBook Pro 15", "errordesciption": "Total im Arsch"]]
 
+    let data:[NSDictionary] = [["status": "1", "dayin": "01.10.2016", "spnumber": "SP34009854", "customername": "Hans Harry Müller", "article": "MacBook Pro 15", "errordescription": "Total im Arsch"]]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -39,15 +39,20 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     }
     
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return data.count
+        return getData().count
     }
     
     func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
-        return nil
+        return data[row].value(forKey: (tableColumn?.identifier)!)
     }
     
     func windowWillClose(_ notification: Notification) {
         print(notification)
+    }
+    
+    func getData() -> [NSDictionary] {
+        let data:[NSDictionary] = [["status": "1", "dayin": "01.10.2016", "spnumber": "SP34009854", "customername": "Hans Harry Müller", "article": "MacBook Pro 15", "errordesciption": "Total im Arsch"]]
+        return data
     }
 }
 
