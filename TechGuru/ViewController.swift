@@ -39,20 +39,16 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     }
     
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return getData().count
+        return data.count
     }
     
     func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
+        print(data[row].value(forKey: (tableColumn?.identifier)!))
         return data[row].value(forKey: (tableColumn?.identifier)!)
     }
     
     func windowWillClose(_ notification: Notification) {
         print(notification)
-    }
-    
-    func getData() -> [NSDictionary] {
-        let data:[NSDictionary] = [["status": "1", "dayin": "01.10.2016", "spnumber": "SP34009854", "customername": "Hans Harry Müller", "article": "MacBook Pro 15", "errordesciption": "Total im Arsch"]]
-        return data
     }
 }
 
