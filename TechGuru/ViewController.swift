@@ -50,10 +50,10 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
         print(data[row].value(forKey: (tableColumn?.identifier)!))
         
-        let result: NSTableCellView = tableView.make(withIdentifier: (tableColumn?.identifier)!, owner: self) as! NSTableCellView
-        result.textField?.stringValue = data[row].value(forKey: (tableColumn?.identifier)!) as! String
+//        let result: NSTableCellView = tableView.make(withIdentifier: (tableColumn?.identifier)!, owner: self) as! NSTableCellView
+//        result.textField?.stringValue = data[row].value(forKey: (tableColumn?.identifier)!) as! String
         
-        return result
+        return data[row].value(forKey: (tableColumn?.identifier)!)
     }
     
     func windowWillClose(_ notification: Notification) {
