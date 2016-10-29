@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2553a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -164,9 +165,9 @@ CA
                         <rect key="frame" x="0.0" y="0.0" width="1532" height="843"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView autohidesScrollers="YES" horizontalLineScroll="18" horizontalPageScroll="10" verticalLineScroll="18" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTZ-Cr-cHN">
+                            <scrollView focusRingType="none" autohidesScrollers="YES" horizontalLineScroll="18" horizontalPageScroll="10" verticalLineScroll="18" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTZ-Cr-cHN">
                                 <rect key="frame" x="202" y="20" width="1310" height="803"/>
-                                <clipView key="contentView" copiesOnScroll="NO" id="gqW-OT-z4q">
+                                <clipView key="contentView" focusRingType="none" copiesOnScroll="NO" id="gqW-OT-z4q">
                                     <rect key="frame" x="1" y="0.0" width="1308" height="802"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -279,7 +280,7 @@ CA
                             </scrollView>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qrK-9m-Zpx">
                                 <rect key="frame" x="14" y="13" width="186" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <buttonCell key="cell" type="push" title="Add New Data" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="vsr-29-G0P">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -430,11 +431,11 @@ CA
                                 </textFieldCell>
                             </textField>
                             <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="huY-5l-GGq">
-                                <rect key="frame" x="20" y="797" width="174" height="5"/>
+                                <rect key="frame" x="20" y="785" width="174" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </box>
                             <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="knZ-oo-V05">
-                                <rect key="frame" x="20" y="611" width="174" height="5"/>
+                                <rect key="frame" x="18" y="521" width="174" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </box>
                         </subviews>
@@ -452,6 +453,7 @@ CA
                         <outlet property="inProgressCasesLabel" destination="4qb-Zz-Mlx" id="59r-jc-4xd"/>
                         <outlet property="mailInCasesLabel" destination="s7a-CL-IiU" id="ejI-a9-YSq"/>
                         <outlet property="newCasesLabel" destination="9Ll-zG-EKS" id="JVA-KK-z22"/>
+                        <outlet property="statusTextField" destination="Ip8-oL-2Y8" id="arK-39-wiN"/>
                         <outlet property="tableView" destination="38k-Ls-4On" id="phn-VJ-iSF"/>
                         <outlet property="userNameLabel" destination="d9s-bi-QuP" id="2UZ-wo-01i"/>
                         <outlet property="waitingCasesLabel" destination="nRq-Hd-CMy" id="JN5-YI-gfH"/>

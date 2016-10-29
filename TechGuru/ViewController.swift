@@ -19,7 +19,6 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     @IBOutlet weak var carryInCasesLabel: NSTextField!
     @IBOutlet weak var mailInCasesLabel: NSTextField!
     @IBOutlet weak var doneCasesLabel: NSTextField!
-
     
     
     let data:[NSMutableDictionary] = [["status": "1", "dayin": "01.10.2016", "spnumber": "SP34009854", "customername": "Hans Harry Müller", "article": "MacBook Pro 15", "errordescription": "Kunde wünscht komplettaustausch über Hersteller. Mit SP34001288 wurden bereits 20 ? bezahlt."],
@@ -33,13 +32,12 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         countStatusInCases()
-        
+        tableView.focusRingType = NSFocusRingType.none
     }
 
     override var representedObject: Any? {
         didSet {
         // Update the view, if already loaded.
-            
         }
     }
     

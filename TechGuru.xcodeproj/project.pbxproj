@@ -14,6 +14,7 @@
 		D246AC891DAD6F21008951E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D246AC871DAD6F21008951E4 /* Main.storyboard */; };
 		D246AC941DAD6F21008951E4 /* TechGuruTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D246AC931DAD6F21008951E4 /* TechGuruTests.swift */; };
 		D246AC9F1DAD6F21008951E4 /* TechGuruUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D246AC9E1DAD6F21008951E4 /* TechGuruUITests.swift */; };
+		D2753E621DC40E5B00CA1A9E /* status1.png in Resources */ = {isa = PBXBuildFile; fileRef = D2753E611DC40E5B00CA1A9E /* status1.png */; };
 		D2A1CF551DB6CB5E00D34662 /* cases in Resources */ = {isa = PBXBuildFile; fileRef = D2A1CF541DB6CB5E00D34662 /* cases */; };
 		D2A1CF911DB6D61B00D34662 /* CSwiftV.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1CF901DB6D61B00D34662 /* CSwiftV.swift */; };
 		D2A1CF981DB6DE1F00D34662 /* Cases+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1CF961DB6DE1F00D34662 /* Cases+CoreDataClass.swift */; };
@@ -51,6 +52,7 @@
 		D246AC9A1DAD6F21008951E4 /* TechGuruUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TechGuruUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D246AC9E1DAD6F21008951E4 /* TechGuruUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechGuruUITests.swift; sourceTree = "<group>"; };
 		D246ACA01DAD6F21008951E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2753E611DC40E5B00CA1A9E /* status1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = status1.png; sourceTree = "<group>"; };
 		D2A1CF541DB6CB5E00D34662 /* cases */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cases; sourceTree = "<group>"; };
 		D2A1CF901DB6D61B00D34662 /* CSwiftV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSwiftV.swift; path = "../../../Downloads/CSwiftV-master/Sources/CSwiftV.swift"; sourceTree = "<group>"; };
 		D2A1CF961DB6DE1F00D34662 /* Cases+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cases+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 		D246AC7D1DAD6F21008951E4 /* TechGuru */ = {
 			isa = PBXGroup;
 			children = (
+				D2753E601DC40E4700CA1A9E /* images */,
 				D2A1CF961DB6DE1F00D34662 /* Cases+CoreDataClass.swift */,
 				D2A1CF971DB6DE1F00D34662 /* Cases+CoreDataProperties.swift */,
 				D2A1CF901DB6D61B00D34662 /* CSwiftV.swift */,
@@ -135,6 +138,14 @@
 				D246ACA01DAD6F21008951E4 /* Info.plist */,
 			);
 			path = TechGuruUITests;
+			sourceTree = "<group>";
+		};
+		D2753E601DC40E4700CA1A9E /* images */ = {
+			isa = PBXGroup;
+			children = (
+				D2753E611DC40E5B00CA1A9E /* status1.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,7 +211,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = DontPlayAlone.de;
 				TargetAttributes = {
 					D246AC7A1DAD6F20008951E4 = {
@@ -248,6 +259,7 @@
 				D2A1CF551DB6CB5E00D34662 /* cases in Resources */,
 				D246AC861DAD6F21008951E4 /* Assets.xcassets in Resources */,
 				D246AC891DAD6F21008951E4 /* Main.storyboard in Resources */,
+				D2753E621DC40E5B00CA1A9E /* status1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +354,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -391,6 +404,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
