@@ -19,20 +19,21 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     @IBOutlet weak var carryInCasesLabel: NSTextField!
     @IBOutlet weak var mailInCasesLabel: NSTextField!
     @IBOutlet weak var doneCasesLabel: NSTextField!
-    
-    
-    let data:[NSMutableDictionary] = [["status": "1", "dayin": "01.10.2016", "spnumber": "SP34009854", "customername": "Hans Harry Müller", "article": "MacBook Pro 15", "errordescription": "Kunde wünscht komplettaustausch über Hersteller. Mit SP34001288 wurden bereits 20 ? bezahlt."],
-                               ["status": "10", "dayin": "01.10.2016", "spnumber": "SP34009854", "customername": "Hans Harry Müller", "article": "MacBook Pro 15", "errordescription": "Kunde wünscht Austausch über den Hersteller."],
-                               ["status": "60", "dayin": "01.10.2016", "spnumber": "SP34009854", "customername": "Hans Harry Müller", "article": "MacBook Pro 15", "errordescription": "Sturzschaden am linken oberen Bildschirmrand. Apple Care-Gerät."],
-                               ["status": "60", "dayin": "01.10.2016", "spnumber": "SP34009854", "customername": "Hans Harry Müller", "article": "MacBook Pro 15", "errordescription": "Displaybruch und Lautstärkeregeler funktioniert nicht. Apple auf Gewährleistung anfragen."],
-                               ["status": "70", "dayin": "01.10.2016", "spnumber": "SP34009854", "customername": "Hans Harry Müller", "article": "MacBook Pro 15", "errordescription": "Ist in die Toilette gefallen. Info lieber per Mail"],
-                               ["status": "90", "dayin": "01.10.2016", "spnumber": "SP34009854", "customername": "Hans Harry Müller", "article": "MacBook Pro 15", "errordescription": "Gerät zur Diagnose. Daraufhin Displaytausch nach Absprache mit dem Kunden."]]
+
+    var data: [DataModel] = [DataModel(status: "80", spnumber: "SP34004584", customername: "Hans Meier", article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
+                             DataModel(status: "75", spnumber: "SP34004584", customername: "Hans Meier", article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
+                             DataModel(status: "70", spnumber: "SP34004584", customername: "Hans Meier", article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
+                             DataModel(status: "60", spnumber: "SP34004584", customername: "Hans Meier", article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
+                             DataModel(status: "20", spnumber: "SP34004584", customername: "Hans Meier", article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
+                             DataModel(status: "10", spnumber: "SP34004584", customername: "Hans Meier", article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
+                             DataModel(status: "1", spnumber: "SP34004584", customername: "Hans Meier", article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
+                             DataModel(status: "1", spnumber: "SP34004584", customername: "Hans Meier", article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        countStatusInCases()
         tableView.focusRingType = NSFocusRingType.none
+        countCases()
     }
 
     override var representedObject: Any? {
@@ -45,48 +46,124 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
         return data.count
     }
     
-    func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
-        return data[row].value(forKey: (tableColumn?.identifier)!)
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        let identifier = tableColumn?.identifier as NSString?
+        
+        if (identifier == "status") {
+            let cell = tableView.make(withIdentifier: "status", owner: self) as! NSTableCellView
+            if (self.data[row].status! == "1")  {
+                cell.textField?.stringValue = "Neu"
+            } else if (self.data[row].status! == "10")  {
+                cell.textField?.stringValue = "In Bearbeitung"
+            } else if (self.data[row].status! == "20")  {
+                cell.textField?.stringValue = "In Diagnose"
+            } else if (self.data[row].status! == "60")  {
+                cell.textField?.stringValue = "Wartend"
+            } else if (self.data[row].status! == "70")  {
+                cell.textField?.stringValue = "Mail In"
+            } else if (self.data[row].status! == "75")  {
+                cell.textField?.stringValue = "Carry In"
+            } else if (self.data[row].status! == "80")  {
+                cell.textField?.stringValue = "Ausgabe"
+            }
+            return cell
+        }else if (identifier == "spnumber"){
+            let cell = tableView.make(withIdentifier: "spnumber", owner: self) as! NSTableCellView
+            cell.textField?.stringValue = self.data[row].spnumber!
+            return cell
+        }else if (identifier == "customername"){
+            let cell = tableView.make(withIdentifier: "customername", owner: self) as! NSTableCellView
+            cell.textField?.stringValue = self.data[row].customername!
+            return cell
+        }else if (identifier == "article"){
+            let cell = tableView.make(withIdentifier: "article", owner: self) as! NSTableCellView
+            cell.textField?.stringValue = self.data[row].article!
+            return cell
+        }else if (identifier == "errordescription"){
+            let cell = tableView.make(withIdentifier: "errordescription", owner: self) as! NSTableCellView
+            cell.textField?.stringValue = self.data[row].errordescription!
+            return cell
+        }else if (identifier == "dayin"){
+            let cell = tableView.make(withIdentifier: "dayin", owner: self) as! NSTableCellView
+            cell.textField?.stringValue = self.data[row].dayin!
+            return cell
+        }
+        return nil
+    }
+
+    func tableView(_ tableView: NSTableView, didAdd rowView: NSTableRowView, forRow row: Int) {
+        if (data[row].status == "1") {
+            //grün
+            //rowView.backgroundColor = NSColor(netHex: 0xC4FFCB)
+        } else if (data[row].status == "10") {
+            //lila
+            rowView.backgroundColor = NSColor(netHex: 0xD3BDFF)
+        } else if (data[row].status == "20") {
+            //blau
+            rowView.backgroundColor = NSColor(netHex: 0xBDD4FF)
+        } else if (data[row].status == "60") {
+            //orange
+            rowView.backgroundColor = NSColor(netHex: 0xFFCFB5)
+        } else if (data[row].status == "70") {
+            //pink
+            rowView.backgroundColor = NSColor(netHex: 0xFFB9F0)
+        } else if (data[row].status == "75") {
+            //pink
+            rowView.backgroundColor = NSColor(netHex: 0xFFB9F0)
+        } else if (data[row].status == "80") {
+            //grün
+            rowView.backgroundColor = NSColor(netHex: 0xC4FFCB)
+        }
     }
     
-    func countStatusInCases(){
+    func countCases(){
         var new: Int = 0
         var inprogress: Int = 0
-        var indiag: Int = 0
+        var diag: Int = 0
         var waiting: Int = 0
         var carryin: Int = 0
         var mailin: Int = 0
         var done: Int = 0
         
         for item in data {
-            switch item.value(forKey: "status"){
-            case "1" as String:
+            if (item.status == "1") {
                 new += 1
-            case "10" as String:
+            } else if (item.status == "10") {
                 inprogress += 1
-            case "50" as String:
-                indiag += 1
-            case "60" as String:
+            } else if (item.status == "20") {
+                diag += 1
+            } else if (item.status == "60") {
                 waiting += 1
-            case "70" as String:
+            }else if (item.status == "70") {
                 carryin += 1
-            case "80" as String:
+            } else if (item.status == "75") {
                 mailin += 1
-            case "90" as String:
+            }else if (item.status == "80") {
                 done += 1
-            default:
-                print("")
             }
         }
         
         newCasesLabel.integerValue = new
         inProgressCasesLabel.integerValue = inprogress
-        inDiagCasesLabel.integerValue = indiag
+        inDiagCasesLabel.integerValue = diag
         waitingCasesLabel.integerValue = waiting
         carryInCasesLabel.integerValue = carryin
         mailInCasesLabel.integerValue = mailin
         doneCasesLabel.integerValue = done
+    }
+}
+
+extension NSColor {
+    convenience init(red: Int, green: Int, blue: Int) {
+        assert(red >= 0 && red <= 255, "Invalid red component")
+        assert(green >= 0 && green <= 255, "Invalid green component")
+        assert(blue >= 0 && blue <= 255, "Invalid blue component")
         
+        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
+    }
+    
+    convenience init(netHex:Int) {
+        self.init(red:(netHex >> 16) & 0xff, green:(netHex >> 8) & 0xff, blue:netHex & 0xff)
     }
 }
 

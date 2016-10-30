@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D20332611DC56FE800744858 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20332601DC56FE800744858 /* DataModel.swift */; };
 		D246AC7F1DAD6F21008951E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D246AC7E1DAD6F21008951E4 /* AppDelegate.swift */; };
 		D246AC811DAD6F21008951E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D246AC801DAD6F21008951E4 /* ViewController.swift */; };
 		D246AC841DAD6F21008951E4 /* TechGuru.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D246AC821DAD6F21008951E4 /* TechGuru.xcdatamodeld */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D20332601DC56FE800744858 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		D246AC7B1DAD6F21008951E4 /* TechGuru.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechGuru.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D246AC7E1DAD6F21008951E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D246AC801DAD6F21008951E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				D2A1CF901DB6D61B00D34662 /* CSwiftV.swift */,
 				D246AC7E1DAD6F21008951E4 /* AppDelegate.swift */,
 				D246AC801DAD6F21008951E4 /* ViewController.swift */,
+				D20332601DC56FE800744858 /* DataModel.swift */,
 				D246AC851DAD6F21008951E4 /* Assets.xcassets */,
 				D246AC871DAD6F21008951E4 /* Main.storyboard */,
 				D246AC8A1DAD6F21008951E4 /* Info.plist */,
@@ -284,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D20332611DC56FE800744858 /* DataModel.swift in Sources */,
 				D246AC811DAD6F21008951E4 /* ViewController.swift in Sources */,
 				D2A1CF991DB6DE1F00D34662 /* Cases+CoreDataProperties.swift in Sources */,
 				D246AC7F1DAD6F21008951E4 /* AppDelegate.swift in Sources */,
