@@ -129,25 +129,20 @@ CA
                             </menuItem>
                         </items>
                     </menu>
-                    <connections>
-                        <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
-                    </connections>
                 </application>
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="TechGuru" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-952" y="-154"/>
+            <point key="canvasLocation" x="-956" y="960"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController storyboardIdentifier="techguru" id="B8D-0N-5wS" sceneMemberID="viewController">
                     <window key="window" title="TechGuru" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" tabbingIdentifier="TechGuru" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
                         <rect key="contentRect" x="620" y="393" width="1500" height="800"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
-                        <value key="minSize" type="size" width="1000" height="500"/>
-                        <value key="maxSize" type="size" width="1600" height="900"/>
                     </window>
                     <connections>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
@@ -166,14 +161,14 @@ CA
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView focusRingType="none" fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="26" horizontalPageScroll="10" verticalLineScroll="26" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTZ-Cr-cHN">
-                                <rect key="frame" x="20" y="20" width="1492" height="690"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <rect key="frame" x="20" y="36" width="1492" height="674"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <clipView key="contentView" focusRingType="none" ambiguous="YES" copiesOnScroll="NO" id="gqW-OT-z4q">
-                                    <rect key="frame" x="1" y="0.0" width="1490" height="689"/>
+                                    <rect key="frame" x="1" y="0.0" width="1490" height="673"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="21" headerView="TAt-Rk-9ut" viewBased="YES" id="38k-Ls-4On">
-                                            <rect key="frame" x="0.0" y="0.0" width="1490" height="666"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1490" height="650"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="5"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -382,12 +377,13 @@ CA
                                             <connections>
                                                 <outlet property="dataSource" destination="XfG-lQ-9wD" id="JWN-K7-Yn1"/>
                                                 <outlet property="delegate" destination="XfG-lQ-9wD" id="smk-4c-z7i"/>
+                                                <outlet property="menu" destination="i9P-hR-gwc" id="BNh-hh-TNC"/>
                                             </connections>
                                         </tableView>
                                     </subviews>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="Kl3-ld-1ww">
-                                    <rect key="frame" x="1" y="673" width="1490" height="16"/>
+                                    <rect key="frame" x="1" y="-16" width="0.0" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="UmC-EA-BdM">
@@ -534,34 +530,35 @@ CA
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="jGP-A5-Yhk">
-                                <rect key="frame" x="481" y="724" width="5" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </box>
-                            <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="kL2-oy-i5z">
-                                <rect key="frame" x="594" y="724" width="5" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </box>
                             <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="uYl-wx-fIl">
-                                <rect key="frame" x="707" y="724" width="5" height="96"/>
+                                <rect key="frame" x="442" y="724" width="79" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </box>
                             <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="8kx-XK-5vq">
-                                <rect key="frame" x="820" y="724" width="5" height="96"/>
+                                <rect key="frame" x="568" y="724" width="59" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </box>
                             <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="R6F-yG-itw">
-                                <rect key="frame" x="933" y="724" width="5" height="96"/>
+                                <rect key="frame" x="680" y="724" width="59" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </box>
-                            <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="za6-nc-Iup">
-                                <rect key="frame" x="1046" y="724" width="5" height="96"/>
+                            <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="WBL-hU-a27">
+                                <rect key="frame" x="794" y="724" width="59" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </box>
+                            <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="iwY-Wv-ABH">
+                                <rect key="frame" x="907" y="724" width="59" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </box>
+                            <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="kbg-un-Ucm">
+                                <rect key="frame" x="1018" y="724" width="59" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </box>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="carryInCasesLabel" destination="UcG-cr-UcJ" id="0Ab-Gh-tDL"/>
+                        <outlet property="changeStateMenu" destination="i9P-hR-gwc" id="NkF-Ag-vdD"/>
                         <outlet property="doneCasesLabel" destination="H9u-2V-Rh1" id="BUC-gd-eFH"/>
                         <outlet property="inDiagCasesLabel" destination="SbZ-UF-ZHb" id="Cls-Xi-mNo"/>
                         <outlet property="inProgressCasesLabel" destination="4qb-Zz-Mlx" id="59r-jc-4xd"/>
@@ -572,8 +569,46 @@ CA
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <menu id="i9P-hR-gwc">
+                    <items>
+                        <menuItem title="Neu" id="0Or-D0-Asx">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="chnageStatusToNew:" target="XfG-lQ-9wD" id="2bu-Na-vxt"/>
+                            </connections>
+                        </menuItem>
+                        <menuItem title="In Bearbeitung" id="hZ1-yt-n0Z">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                        </menuItem>
+                        <menuItem title="In Diagnose" id="lQN-Fb-mfW">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                        </menuItem>
+                        <menuItem title="Wartend (KVA)" id="gEM-Nt-54e">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                        </menuItem>
+                        <menuItem title="Wartend (FMI)" id="Vnm-qi-n8v">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                        </menuItem>
+                        <menuItem title="Wartend (PIN)" id="04F-hf-KoF">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                        </menuItem>
+                        <menuItem title="Carry In" id="obb-MH-IEe">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                        </menuItem>
+                        <menuItem title="Mail In" id="4I9-fE-D91">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                        </menuItem>
+                        <menuItem title="Ausgabe" id="B3D-Zb-xkh">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                        </menuItem>
+                        <menuItem isSeparatorItem="YES" id="A6V-9e-elt"/>
+                        <menuItem title="Details" id="l5L-Lv-Ffw">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                        </menuItem>
+                    </items>
+                </menu>
             </objects>
-            <point key="canvasLocation" x="75" y="1180.5"/>
+            <point key="canvasLocation" x="75" y="1296"/>
         </scene>
     </scenes>
 </document>

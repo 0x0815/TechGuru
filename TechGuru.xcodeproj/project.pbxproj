@@ -18,8 +18,6 @@
 		D2753E621DC40E5B00CA1A9E /* status1.png in Resources */ = {isa = PBXBuildFile; fileRef = D2753E611DC40E5B00CA1A9E /* status1.png */; };
 		D2A1CF551DB6CB5E00D34662 /* cases in Resources */ = {isa = PBXBuildFile; fileRef = D2A1CF541DB6CB5E00D34662 /* cases */; };
 		D2A1CF911DB6D61B00D34662 /* CSwiftV.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1CF901DB6D61B00D34662 /* CSwiftV.swift */; };
-		D2A1CF981DB6DE1F00D34662 /* Cases+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1CF961DB6DE1F00D34662 /* Cases+CoreDataClass.swift */; };
-		D2A1CF991DB6DE1F00D34662 /* Cases+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1CF971DB6DE1F00D34662 /* Cases+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +55,6 @@
 		D2753E611DC40E5B00CA1A9E /* status1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = status1.png; sourceTree = "<group>"; };
 		D2A1CF541DB6CB5E00D34662 /* cases */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cases; sourceTree = "<group>"; };
 		D2A1CF901DB6D61B00D34662 /* CSwiftV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSwiftV.swift; path = "../../../Downloads/CSwiftV-master/Sources/CSwiftV.swift"; sourceTree = "<group>"; };
-		D2A1CF961DB6DE1F00D34662 /* Cases+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cases+CoreDataClass.swift"; sourceTree = "<group>"; };
-		D2A1CF971DB6DE1F00D34662 /* Cases+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cases+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				D2753E601DC40E4700CA1A9E /* images */,
-				D2A1CF961DB6DE1F00D34662 /* Cases+CoreDataClass.swift */,
-				D2A1CF971DB6DE1F00D34662 /* Cases+CoreDataProperties.swift */,
 				D2A1CF901DB6D61B00D34662 /* CSwiftV.swift */,
 				D246AC7E1DAD6F21008951E4 /* AppDelegate.swift */,
 				D246AC801DAD6F21008951E4 /* ViewController.swift */,
@@ -289,10 +283,8 @@
 			files = (
 				D20332611DC56FE800744858 /* DataModel.swift in Sources */,
 				D246AC811DAD6F21008951E4 /* ViewController.swift in Sources */,
-				D2A1CF991DB6DE1F00D34662 /* Cases+CoreDataProperties.swift in Sources */,
 				D246AC7F1DAD6F21008951E4 /* AppDelegate.swift in Sources */,
 				D2A1CF911DB6D61B00D34662 /* CSwiftV.swift in Sources */,
-				D2A1CF981DB6DE1F00D34662 /* Cases+CoreDataClass.swift in Sources */,
 				D246AC841DAD6F21008951E4 /* TechGuru.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,7 +11,6 @@ import Cocoa
 class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate, NSWindowDelegate {
 
     @IBOutlet weak var tableView: NSTableView!
-    @IBOutlet weak var userNameLabel: NSTextField!
     @IBOutlet weak var newCasesLabel: NSTextField!
     @IBOutlet weak var inProgressCasesLabel: NSTextField!
     @IBOutlet weak var inDiagCasesLabel: NSTextField!
@@ -19,6 +18,9 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     @IBOutlet weak var carryInCasesLabel: NSTextField!
     @IBOutlet weak var mailInCasesLabel: NSTextField!
     @IBOutlet weak var doneCasesLabel: NSTextField!
+    @IBOutlet var changeStateMenu: NSMenu!
+    
+    let statusBarItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
 
     var data: [DataModel] = [DataModel(status: "80", spnumber: "SP34004584", customername: "Hans Meier", article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
                              DataModel(status: "75", spnumber: "SP34004584", customername: "Hans Meier", article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
@@ -32,6 +34,7 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        statusBarItem.title = "TechGuru"
         tableView.focusRingType = NSFocusRingType.none
         countCases()
     }
@@ -46,11 +49,14 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
         return data.count
     }
     
+    
+    
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         let identifier = tableColumn?.identifier as NSString?
         
         if (identifier == "status") {
             let cell = tableView.make(withIdentifier: "status", owner: self) as! NSTableCellView
+            
             if (self.data[row].status! == "1")  {
                 cell.textField?.stringValue = "Neu"
             } else if (self.data[row].status! == "10")  {
@@ -114,6 +120,10 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
             //grün
             rowView.backgroundColor = NSColor(netHex: 0xC4FFCB)
         }
+    }
+
+    @IBAction func chnageStatusToNew(_ sender: Any) {
+        print(sender)
     }
     
     func countCases(){
