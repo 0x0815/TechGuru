@@ -10,14 +10,16 @@ class DataModel {
     var status: String?
     var spnumber: String?
     var customername: String?
+    var mail: String?
     var article: String?
     var dayin: String?
     var errordescription: String?
     
-    init(status: String, spnumber: String, customername: String, article: String, dayin: String, errordescription: String) {
+    init(status: String, spnumber: String, customername: String, mail: String, article: String, dayin: String, errordescription: String) {
         self.status = status
         self.spnumber = spnumber
         self.customername = customername
+        self.mail = mail
         self.article = article
         self.dayin = dayin
         self.errordescription = errordescription

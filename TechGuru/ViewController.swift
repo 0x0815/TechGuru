@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate, NSWindowDelegate {
+class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate, NSWindowDelegate, NSSharingServiceDelegate {
 
     @IBOutlet weak var tableView: NSTableView!
     @IBOutlet weak var newCasesLabel: NSTextField!
@@ -21,19 +21,18 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     @IBOutlet var changeStateMenu: NSMenu!
     
     let statusBarItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
-
-    var data: [DataModel] = [DataModel(status: "80", spnumber: "SP34004584", customername: "Hans Meier", article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
-                             DataModel(status: "75", spnumber: "SP34004584", customername: "Hans Meier", article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
-                             DataModel(status: "70", spnumber: "SP34004584", customername: "Hans Meier", article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
-                             DataModel(status: "60", spnumber: "SP34004584", customername: "Hans Meier", article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
-                             DataModel(status: "20", spnumber: "SP34004584", customername: "Hans Meier", article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
-                             DataModel(status: "10", spnumber: "SP34004584", customername: "Hans Meier", article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
-                             DataModel(status: "1", spnumber: "SP34004584", customername: "Hans Meier", article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
-                             DataModel(status: "1", spnumber: "SP34004584", customername: "Hans Meier", article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail")]
+    
+    var data: [DataModel] = [DataModel(status: "80", spnumber: "SP34004581", customername: "Hans Meier", mail: "test@test.de", article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
+                             DataModel(status: "75", spnumber: "SP34004582", customername: "Hans Meier", mail: "test@test.de", article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
+                             DataModel(status: "70", spnumber: "SP34004583", customername: "Hans Meier", mail: "test@test.de", article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
+                             DataModel(status: "60", spnumber: "SP34004584", customername: "Hans Meier", mail: "test@test.de", article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
+                             DataModel(status: "20", spnumber: "SP34004585", customername: "Hans Meier", mail: "test@test.de", article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
+                             DataModel(status: "10", spnumber: "SP34004586", customername: "Hans Meier", mail: "test@test.de", article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
+                             DataModel(status: "1", spnumber: "SP34004587", customername: "Hans Meier", mail: "test@test.de", article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
+                             DataModel(status: "1", spnumber: "SP34004588", customername: "Hans Meier", mail: "test@test.de", article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         statusBarItem.title = "TechGuru"
         tableView.focusRingType = NSFocusRingType.none
         countCases()
@@ -48,8 +47,6 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     func numberOfRows(in tableView: NSTableView) -> Int {
         return data.count
     }
-    
-    
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         let identifier = tableColumn?.identifier as NSString?
@@ -96,7 +93,7 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
         }
         return nil
     }
-
+    
     func tableView(_ tableView: NSTableView, didAdd rowView: NSTableRowView, forRow row: Int) {
         if (data[row].status == "1") {
             //grün
@@ -123,7 +120,132 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     }
 
     @IBAction func chnageStatusToNew(_ sender: Any) {
-        print(sender)
+        let clickedRow = tableView.clickedRow
+        
+        if (clickedRow != -1) {
+        }
+    }
+    
+    @IBAction func changeStateToInProgress(_ sender: Any) {
+        let clickedRow = tableView.clickedRow
+        
+        if (clickedRow != -1) {
+        }
+    }
+    
+    @IBAction func changeStateToInDiag(_ sender: Any) {
+        let clickedRow = tableView.clickedRow
+        
+        if (clickedRow != -1) {
+        }
+    }
+    
+    @IBAction func changeStateToWaitingQuotation(_ sender: Any) {
+        let clickedRow = tableView.clickedRow
+        
+        if (clickedRow != -1) {
+            var sex = ""
+            
+            if sexDiaglog() {
+                sex = "Herr"
+            } else {
+                sex = "Frau"
+            }
+            
+            let spNumber = data[clickedRow].spnumber
+            let recipients = data[clickedRow].mail
+            let customername = data[clickedRow].customername!.components(separatedBy: " ")
+            let body = "Sehr geehrter " + sex + " " + customername[1] + ",\n\nhier ist ihr KVA. Blablabla"
+        
+            let service = NSSharingService(named: NSSharingServiceNameComposeEmail)
+            service?.delegate = self
+            service?.recipients = [recipients!]
+            service?.subject = "Kostenvoranschlag - Referenz: " + spNumber!
+            service?.perform(withItems: [body])
+        }
+    }
+    
+    @IBAction func changeStateToFMI(_ sender: Any) {
+        let clickedRow = tableView.clickedRow
+        
+        if (clickedRow != -1) {
+            var sex = ""
+            
+            if sexDiaglog() {
+                sex = "Herr"
+            } else {
+                sex = "Frau"
+            }
+            
+            let spNumber = data[clickedRow].spnumber
+            let recipients = data[clickedRow].mail
+            let customername = data[clickedRow].customername!.components(separatedBy: " ")
+            let body = "Sehr geehrter " + sex + " " + customername[1] + ",\n\nFMI noch aktiv, blabla"
+            
+            let service = NSSharingService(named: NSSharingServiceNameComposeEmail)
+            service?.delegate = self
+            service?.recipients = [recipients!]
+            service?.subject = "Find My iPhone ist noch aktiv - Referenz: " + spNumber!
+            service?.perform(withItems: [body])
+        }
+    }
+    
+    @IBAction func changeStateToPIN(_ sender: Any) {
+        let clickedRow = tableView.clickedRow
+        
+        if (clickedRow != -1) {
+            var sex = ""
+            
+            if sexDiaglog() {
+                sex = "Herr"
+            } else {
+                sex = "Frau"
+            }
+            
+            let spNumber = data[clickedRow].spnumber
+            let recipients = data[clickedRow].mail
+            let customername = data[clickedRow].customername!.components(separatedBy: " ")
+            let body = "Sehr geehrter " + sex + " " + customername[1] + ",\n\num weiter machen zu können benötigen wir den Pin blablabla"
+            
+            let service = NSSharingService(named: NSSharingServiceNameComposeEmail)
+            service?.delegate = self
+            service?.recipients = [recipients!]
+            service?.subject = "Der Pin ihres iPhones wird benötigt - Referenz: " + spNumber!
+            service?.perform(withItems: [body])
+        }
+    }
+    
+    @IBAction func changeStateToCarryIn(_ sender: Any) {
+        let clickedRow = tableView.clickedRow
+        
+        if clickedRow != -1 {
+        }
+    }
+    
+    @IBAction func changeStateToMailIn(_ sender: Any) {
+        let clickedRow = tableView.clickedRow
+        
+        if clickedRow != -1 {
+        }
+    }
+    
+    @IBAction func changeStateToDone(_ sender: Any) {
+        let clickedRow = tableView.clickedRow
+        
+        if clickedRow != -1 {
+        }
+    }
+    
+    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
+        let clickedRow = tableView.clickedRow
+        
+        if segue.identifier == "detailsSegue" {
+            if let destinationDetailViewController = segue.destinationController as? DetailsViewController {
+                if clickedRow != -1 {
+                    destinationDetailViewController.spNumber = data[clickedRow].spnumber!
+                }
+            }
+        }
     }
     
     func countCases(){
@@ -160,6 +282,16 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
         carryInCasesLabel.integerValue = carryin
         mailInCasesLabel.integerValue = mailin
         doneCasesLabel.integerValue = done
+    }
+    
+    func sexDiaglog() -> Bool {
+        let popup: NSAlert = NSAlert()
+        popup.messageText = "Ist der Kunde Weiblich oder Männlich?"
+        popup.informativeText = "Da BT6 leider keine Daten über das, bei der Kundenannahme ausgewählte, Geschlecht liefert wähle es bitte hier aus."
+        popup.alertStyle = NSAlertStyle.informational
+        popup.addButton(withTitle: "Männlich")
+        popup.addButton(withTitle: "Weiblich")
+        return popup.runModal() == NSAlertFirstButtonReturn
     }
 }
 

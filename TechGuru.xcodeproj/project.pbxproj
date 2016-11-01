@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		D20332611DC56FE800744858 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20332601DC56FE800744858 /* DataModel.swift */; };
+		D20FC8FC1DC8EA8C007C583A /* AddNewDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20FC8FB1DC8EA8C007C583A /* AddNewDataViewController.swift */; };
+		D20FC8FE1DC8FA75007C583A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20FC8FD1DC8FA75007C583A /* SettingsViewController.swift */; };
+		D20FC9001DC8FDA0007C583A /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20FC8FF1DC8FDA0007C583A /* DetailsViewController.swift */; };
 		D246AC7F1DAD6F21008951E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D246AC7E1DAD6F21008951E4 /* AppDelegate.swift */; };
 		D246AC811DAD6F21008951E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D246AC801DAD6F21008951E4 /* ViewController.swift */; };
 		D246AC841DAD6F21008951E4 /* TechGuru.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D246AC821DAD6F21008951E4 /* TechGuru.xcdatamodeld */; };
@@ -15,9 +18,7 @@
 		D246AC891DAD6F21008951E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D246AC871DAD6F21008951E4 /* Main.storyboard */; };
 		D246AC941DAD6F21008951E4 /* TechGuruTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D246AC931DAD6F21008951E4 /* TechGuruTests.swift */; };
 		D246AC9F1DAD6F21008951E4 /* TechGuruUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D246AC9E1DAD6F21008951E4 /* TechGuruUITests.swift */; };
-		D2753E621DC40E5B00CA1A9E /* status1.png in Resources */ = {isa = PBXBuildFile; fileRef = D2753E611DC40E5B00CA1A9E /* status1.png */; };
 		D2A1CF551DB6CB5E00D34662 /* cases in Resources */ = {isa = PBXBuildFile; fileRef = D2A1CF541DB6CB5E00D34662 /* cases */; };
-		D2A1CF911DB6D61B00D34662 /* CSwiftV.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1CF901DB6D61B00D34662 /* CSwiftV.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,9 @@
 
 /* Begin PBXFileReference section */
 		D20332601DC56FE800744858 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		D20FC8FB1DC8EA8C007C583A /* AddNewDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewDataViewController.swift; sourceTree = "<group>"; };
+		D20FC8FD1DC8FA75007C583A /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D20FC8FF1DC8FDA0007C583A /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		D246AC7B1DAD6F21008951E4 /* TechGuru.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechGuru.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D246AC7E1DAD6F21008951E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D246AC801DAD6F21008951E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,9 +56,7 @@
 		D246AC9A1DAD6F21008951E4 /* TechGuruUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TechGuruUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D246AC9E1DAD6F21008951E4 /* TechGuruUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechGuruUITests.swift; sourceTree = "<group>"; };
 		D246ACA01DAD6F21008951E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D2753E611DC40E5B00CA1A9E /* status1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = status1.png; sourceTree = "<group>"; };
 		D2A1CF541DB6CB5E00D34662 /* cases */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cases; sourceTree = "<group>"; };
-		D2A1CF901DB6D61B00D34662 /* CSwiftV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSwiftV.swift; path = "../../../Downloads/CSwiftV-master/Sources/CSwiftV.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,10 +107,11 @@
 		D246AC7D1DAD6F21008951E4 /* TechGuru */ = {
 			isa = PBXGroup;
 			children = (
-				D2753E601DC40E4700CA1A9E /* images */,
-				D2A1CF901DB6D61B00D34662 /* CSwiftV.swift */,
 				D246AC7E1DAD6F21008951E4 /* AppDelegate.swift */,
 				D246AC801DAD6F21008951E4 /* ViewController.swift */,
+				D20FC8FF1DC8FDA0007C583A /* DetailsViewController.swift */,
+				D20FC8FD1DC8FA75007C583A /* SettingsViewController.swift */,
+				D20FC8FB1DC8EA8C007C583A /* AddNewDataViewController.swift */,
 				D20332601DC56FE800744858 /* DataModel.swift */,
 				D246AC851DAD6F21008951E4 /* Assets.xcassets */,
 				D246AC871DAD6F21008951E4 /* Main.storyboard */,
@@ -135,14 +138,6 @@
 				D246ACA01DAD6F21008951E4 /* Info.plist */,
 			);
 			path = TechGuruUITests;
-			sourceTree = "<group>";
-		};
-		D2753E601DC40E4700CA1A9E /* images */ = {
-			isa = PBXGroup;
-			children = (
-				D2753E611DC40E5B00CA1A9E /* status1.png */,
-			);
-			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +251,6 @@
 				D2A1CF551DB6CB5E00D34662 /* cases in Resources */,
 				D246AC861DAD6F21008951E4 /* Assets.xcassets in Resources */,
 				D246AC891DAD6F21008951E4 /* Main.storyboard in Resources */,
-				D2753E621DC40E5B00CA1A9E /* status1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,9 +277,11 @@
 			files = (
 				D20332611DC56FE800744858 /* DataModel.swift in Sources */,
 				D246AC811DAD6F21008951E4 /* ViewController.swift in Sources */,
+				D20FC8FC1DC8EA8C007C583A /* AddNewDataViewController.swift in Sources */,
 				D246AC7F1DAD6F21008951E4 /* AppDelegate.swift in Sources */,
-				D2A1CF911DB6D61B00D34662 /* CSwiftV.swift in Sources */,
+				D20FC9001DC8FDA0007C583A /* DetailsViewController.swift in Sources */,
 				D246AC841DAD6F21008951E4 /* TechGuru.xcdatamodeld in Sources */,
+				D20FC8FE1DC8FA75007C583A /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
