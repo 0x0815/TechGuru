@@ -25,6 +25,7 @@ class DetailsViewController: NSViewController {
     var errordescription: String = ""
     
     override func viewDidLoad() {
+        self.title = "Details"
         spNumberLabel.stringValue = spNumber
         deviceNSLabel.stringValue = deviceSN
         customerNameLabel.stringValue = customerName

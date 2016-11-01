@@ -22,14 +22,14 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     
     let statusBarItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
     
-    var data: [DataModel] = [DataModel(status: "80", spnumber: "SP34004581", customername: "Hans Meier", mail: "test@test.de", article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
-                             DataModel(status: "75", spnumber: "SP34004582", customername: "Hans Meier", mail: "test@test.de", article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
-                             DataModel(status: "70", spnumber: "SP34004583", customername: "Hans Meier", mail: "test@test.de", article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
-                             DataModel(status: "60", spnumber: "SP34004584", customername: "Hans Meier", mail: "test@test.de", article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
-                             DataModel(status: "20", spnumber: "SP34004585", customername: "Hans Meier", mail: "test@test.de", article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
-                             DataModel(status: "10", spnumber: "SP34004586", customername: "Hans Meier", mail: "test@test.de", article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
-                             DataModel(status: "1", spnumber: "SP34004587", customername: "Hans Meier", mail: "test@test.de", article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
-                             DataModel(status: "1", spnumber: "SP34004588", customername: "Hans Meier", mail: "test@test.de", article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail")]
+    var data: [DataModel] = [DataModel(status: "80", spnumber: "SP34004581", customername: "Hans Meier", mail: "test@test.de", phone: "015425468547", article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
+                             DataModel(status: "75", spnumber: "SP34004582", customername: "Hans Meier", mail: "test@test.de", phone: "015425468547",  article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
+                             DataModel(status: "70", spnumber: "SP34004583", customername: "Hans Meier", mail: "test@test.de", phone: "015425468547",  article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
+                             DataModel(status: "60", spnumber: "SP34004584", customername: "Hans Meier", mail: "test@test.de", phone: "015425468547",  article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
+                             DataModel(status: "20", spnumber: "SP34004585", customername: "Hans Meier", mail: "test@test.de", phone: "015425468547",  article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
+                             DataModel(status: "10", spnumber: "SP34004586", customername: "Hans Meier", mail: "test@test.de", phone: "015425468547",  article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
+                             DataModel(status: "1", spnumber: "SP34004587", customername: "Hans Meier", mail: "test@test.de", phone: "015425468547",  article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
+                             DataModel(status: "1", spnumber: "SP34004588", customername: "Hans Meier", mail: "test@test.de", phone: "015425468547",  article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -243,6 +243,11 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
             if let destinationDetailViewController = segue.destinationController as? DetailsViewController {
                 if clickedRow != -1 {
                     destinationDetailViewController.spNumber = data[clickedRow].spnumber!
+                    destinationDetailViewController.deviceSN = data[clickedRow].article!
+                    destinationDetailViewController.customerName = data[clickedRow].customername!
+                    destinationDetailViewController.customerMail = data[clickedRow].mail!
+                    destinationDetailViewController.customerPhone = data[clickedRow].phone!
+                    destinationDetailViewController.errordescription = data[clickedRow].errordescription!
                 }
             }
         }

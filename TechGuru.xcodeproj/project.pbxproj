@@ -11,6 +11,8 @@
 		D20FC8FC1DC8EA8C007C583A /* AddNewDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20FC8FB1DC8EA8C007C583A /* AddNewDataViewController.swift */; };
 		D20FC8FE1DC8FA75007C583A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20FC8FD1DC8FA75007C583A /* SettingsViewController.swift */; };
 		D20FC9001DC8FDA0007C583A /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20FC8FF1DC8FDA0007C583A /* DetailsViewController.swift */; };
+		D20FC9021DC928B4007C583A /* handleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20FC9011DC928B4007C583A /* handleData.swift */; };
+		D20FC9041DC93395007C583A /* CSwiftV.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20FC9031DC93395007C583A /* CSwiftV.swift */; };
 		D246AC7F1DAD6F21008951E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D246AC7E1DAD6F21008951E4 /* AppDelegate.swift */; };
 		D246AC811DAD6F21008951E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D246AC801DAD6F21008951E4 /* ViewController.swift */; };
 		D246AC841DAD6F21008951E4 /* TechGuru.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D246AC821DAD6F21008951E4 /* TechGuru.xcdatamodeld */; };
@@ -43,6 +45,8 @@
 		D20FC8FB1DC8EA8C007C583A /* AddNewDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewDataViewController.swift; sourceTree = "<group>"; };
 		D20FC8FD1DC8FA75007C583A /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D20FC8FF1DC8FDA0007C583A /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		D20FC9011DC928B4007C583A /* handleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = handleData.swift; sourceTree = "<group>"; };
+		D20FC9031DC93395007C583A /* CSwiftV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSwiftV.swift; sourceTree = "<group>"; };
 		D246AC7B1DAD6F21008951E4 /* TechGuru.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechGuru.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D246AC7E1DAD6F21008951E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D246AC801DAD6F21008951E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,12 +111,14 @@
 		D246AC7D1DAD6F21008951E4 /* TechGuru */ = {
 			isa = PBXGroup;
 			children = (
-				D246AC7E1DAD6F21008951E4 /* AppDelegate.swift */,
+				D20FC9011DC928B4007C583A /* handleData.swift */,
 				D246AC801DAD6F21008951E4 /* ViewController.swift */,
 				D20FC8FF1DC8FDA0007C583A /* DetailsViewController.swift */,
 				D20FC8FD1DC8FA75007C583A /* SettingsViewController.swift */,
 				D20FC8FB1DC8EA8C007C583A /* AddNewDataViewController.swift */,
 				D20332601DC56FE800744858 /* DataModel.swift */,
+				D20FC9031DC93395007C583A /* CSwiftV.swift */,
+				D246AC7E1DAD6F21008951E4 /* AppDelegate.swift */,
 				D246AC851DAD6F21008951E4 /* Assets.xcassets */,
 				D246AC871DAD6F21008951E4 /* Main.storyboard */,
 				D246AC8A1DAD6F21008951E4 /* Info.plist */,
@@ -276,11 +282,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D20332611DC56FE800744858 /* DataModel.swift in Sources */,
+				D20FC9021DC928B4007C583A /* handleData.swift in Sources */,
 				D246AC811DAD6F21008951E4 /* ViewController.swift in Sources */,
 				D20FC8FC1DC8EA8C007C583A /* AddNewDataViewController.swift in Sources */,
 				D246AC7F1DAD6F21008951E4 /* AppDelegate.swift in Sources */,
 				D20FC9001DC8FDA0007C583A /* DetailsViewController.swift in Sources */,
 				D246AC841DAD6F21008951E4 /* TechGuru.xcdatamodeld in Sources */,
+				D20FC9041DC93395007C583A /* CSwiftV.swift in Sources */,
 				D20FC8FE1DC8FA75007C583A /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

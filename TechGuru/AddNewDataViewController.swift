@@ -9,6 +9,7 @@
 import Cocoa
 
 class AddNewDataViewController: NSViewController {
+    
     @IBOutlet weak var addNewDataTextfield: NSTextField!
     
     override func viewDidLoad() {
@@ -16,7 +17,8 @@ class AddNewDataViewController: NSViewController {
     }
     
     @IBAction func addNewDataButton(_ sender: Any) {
-        print(addNewDataTextfield.stringValue)
+        let sendData = handleData()
+        sendData.addNewDataHTML(postData: addNewDataTextfield.stringValue)
         self.dismiss(sender)
     }
 }
