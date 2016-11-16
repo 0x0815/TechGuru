@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C32e" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C48b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
@@ -71,11 +71,6 @@
                                 <menu key="submenu" title="File" id="bib-Uj-vzu">
                                     <items>
                                         <menuItem title="Read from Clippboard" keyEquivalent="n" id="Was-JA-tGl"/>
-                                        <menuItem title="Read from File" keyEquivalent="o" id="IAo-SY-fd9">
-                                            <connections>
-                                                <action selector="openDocument:" target="Ady-hI-5gd" id="bVn-NM-KNZ"/>
-                                            </connections>
-                                        </menuItem>
                                         <menuItem isSeparatorItem="YES" id="m54-Is-iLE"/>
                                         <menuItem title="Close" keyEquivalent="w" id="DVo-aG-piG">
                                             <connections>
@@ -138,7 +133,7 @@ CA
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="TechGuru" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-985" y="930"/>
+            <point key="canvasLocation" x="-801" y="911"/>
         </scene>
         <!--Einstellungen-->
         <scene sceneID="tbz-CN-D6D">
@@ -185,7 +180,7 @@ CA
                 </viewController>
                 <customObject id="O1M-9N-DSY" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-986" y="1172"/>
+            <point key="canvasLocation" x="-802" y="1147"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
@@ -193,8 +188,10 @@ CA
                 <windowController storyboardIdentifier="techguru" id="B8D-0N-5wS" sceneMemberID="viewController">
                     <window key="window" title="TechGuru" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" tabbingIdentifier="TechGuru" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
-                        <rect key="contentRect" x="620" y="393" width="1500" height="800"/>
+                        <rect key="contentRect" x="620" y="393" width="1100" height="700"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <value key="minSize" type="size" width="1100" height="700"/>
+                        <value key="maxSize" type="size" width="1500" height="1000"/>
                     </window>
                     <connections>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
@@ -202,25 +199,25 @@ CA
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="-53" y="313"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="TechGuru" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="1532" height="843"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1100" height="700"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView focusRingType="none" fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="26" horizontalPageScroll="10" verticalLineScroll="26" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTZ-Cr-cHN">
-                                <rect key="frame" x="20" y="51" width="1492" height="659"/>
+                                <rect key="frame" x="20" y="51" width="1060" height="516"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <clipView key="contentView" focusRingType="none" ambiguous="YES" copiesOnScroll="NO" id="gqW-OT-z4q">
-                                    <rect key="frame" x="1" y="0.0" width="1490" height="658"/>
+                                    <rect key="frame" x="1" y="0.0" width="1058" height="515"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="21" headerView="TAt-Rk-9ut" viewBased="YES" id="38k-Ls-4On">
-                                            <rect key="frame" x="0.0" y="0.0" width="1490" height="635"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1058" height="492"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="5"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -392,7 +389,7 @@ CA
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
-                                                <tableColumn identifier="errordescription" width="895" minWidth="10" maxWidth="3.4028234663852886e+38" id="vIa-Ym-z13">
+                                                <tableColumn identifier="errordescription" width="463" minWidth="10" maxWidth="3.4028234663852886e+38" id="vIa-Ym-z13">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Fehlerbeschreibung">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -406,11 +403,11 @@ CA
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="OWS-PN-ccH">
-                                                            <rect key="frame" x="593" y="2" width="895" height="17"/>
+                                                            <rect key="frame" x="593" y="2" width="463" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S7H-7h-Pjb">
-                                                                    <rect key="frame" x="0.0" y="-4" width="895" height="21"/>
+                                                                    <rect key="frame" x="0.0" y="-4" width="463" height="21"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="yXv-cL-itz">
                                                                         <font key="font" size="14" name="Roboto-Light"/>
@@ -435,7 +432,7 @@ CA
                                     </subviews>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="Kl3-ld-1ww">
-                                    <rect key="frame" x="1" y="-16" width="0.0" height="16"/>
+                                    <rect key="frame" x="1" y="530" width="958" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="UmC-EA-BdM">
@@ -443,12 +440,12 @@ CA
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <tableHeaderView key="headerView" id="TAt-Rk-9ut">
-                                    <rect key="frame" x="0.0" y="0.0" width="1490" height="23"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1058" height="23"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s5K-gk-m14">
-                                <rect key="frame" x="20" y="806" width="4" height="17"/>
+                                <rect key="frame" x="20" y="658" width="4" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="0Lj-AV-lC3">
                                     <font key="font" metaFont="system"/>
@@ -457,7 +454,7 @@ CA
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xzp-fj-Ihz">
-                                <rect key="frame" x="377" y="800" width="100" height="23"/>
+                                <rect key="frame" x="71" y="649" width="100" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Neu" id="8Jc-pS-ivf">
                                     <font key="font" size="15" name="Roboto-Thin"/>
@@ -466,7 +463,7 @@ CA
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Div-cY-qTB">
-                                <rect key="frame" x="490" y="800" width="100" height="23"/>
+                                <rect key="frame" x="214" y="649" width="100" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Bearbeitung" id="vlx-s7-EBz">
                                     <font key="font" size="15" name="Roboto-Thin"/>
@@ -474,17 +471,8 @@ CA
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H01-Rf-KE5">
-                                <rect key="frame" x="603" y="800" width="100" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Diagnose" id="OZm-PJ-vOD">
-                                    <font key="font" size="15" name="Roboto-Thin"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lN8-CD-tLy">
-                                <rect key="frame" x="829" y="800" width="100" height="23"/>
+                                <rect key="frame" x="643" y="649" width="100" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Carry In" id="cb5-44-uyC">
                                     <font key="font" size="15" name="Roboto-Thin"/>
@@ -493,7 +481,7 @@ CA
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a4m-GG-POh">
-                                <rect key="frame" x="942" y="800" width="100" height="23"/>
+                                <rect key="frame" x="786" y="649" width="100" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Mail In" id="RnT-d9-Of0">
                                     <font key="font" size="15" name="Roboto-Thin"/>
@@ -502,7 +490,7 @@ CA
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jmY-jH-2J5">
-                                <rect key="frame" x="1055" y="800" width="100" height="23"/>
+                                <rect key="frame" x="929" y="649" width="100" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Ausgabe" id="rmU-Wo-h5h">
                                     <font key="font" size="15" name="Roboto-Thin"/>
@@ -511,7 +499,7 @@ CA
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b70-EE-g2d">
-                                <rect key="frame" x="716" y="800" width="100" height="23"/>
+                                <rect key="frame" x="500" y="649" width="100" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Wartend" id="GwC-h7-fvm">
                                     <font key="font" size="15" name="Roboto-Thin"/>
@@ -520,7 +508,7 @@ CA
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Ll-zG-EKS">
-                                <rect key="frame" x="377" y="742" width="100" height="60"/>
+                                <rect key="frame" x="71" y="591" width="100" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="XXX" id="usw-dX-aaT">
                                     <font key="font" size="50" name="Roboto-Thin"/>
@@ -529,7 +517,7 @@ CA
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4qb-Zz-Mlx">
-                                <rect key="frame" x="490" y="742" width="100" height="60"/>
+                                <rect key="frame" x="214" y="591" width="100" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="XXX" id="rJD-Ru-oQk">
                                     <font key="font" size="50" name="Roboto-Thin"/>
@@ -537,17 +525,8 @@ CA
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SbZ-UF-ZHb">
-                                <rect key="frame" x="603" y="742" width="100" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="XXX" id="TvG-Tl-E35">
-                                    <font key="font" size="50" name="Roboto-Thin"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nRq-Hd-CMy">
-                                <rect key="frame" x="716" y="742" width="100" height="60"/>
+                                <rect key="frame" x="500" y="591" width="100" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="XXX" id="ItX-RG-HB4">
                                     <font key="font" size="50" name="Roboto-Thin"/>
@@ -556,7 +535,7 @@ CA
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UcG-cr-UcJ">
-                                <rect key="frame" x="829" y="742" width="100" height="60"/>
+                                <rect key="frame" x="643" y="591" width="100" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="XXX" id="L92-hx-tfp">
                                     <font key="font" size="50" name="Roboto-Thin"/>
@@ -565,7 +544,7 @@ CA
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s7a-CL-IiU">
-                                <rect key="frame" x="942" y="742" width="100" height="60"/>
+                                <rect key="frame" x="786" y="591" width="100" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="XXX" id="vul-G3-sWe">
                                     <font key="font" size="50" name="Roboto-Thin"/>
@@ -574,7 +553,7 @@ CA
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H9u-2V-Rh1">
-                                <rect key="frame" x="1055" y="742" width="100" height="60"/>
+                                <rect key="frame" x="929" y="591" width="100" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="XXX" id="3ON-xD-yqW">
                                     <font key="font" size="50" name="Roboto-Thin"/>
@@ -582,21 +561,51 @@ CA
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="R6F-yG-itw">
-                                <rect key="frame" x="683" y="727" width="49" height="96"/>
+                            <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="rJL-wg-7lN">
+                                <rect key="frame" x="175" y="578" width="35" height="102"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </box>
-                            <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="iwY-Wv-ABH">
-                                <rect key="frame" x="928" y="727" width="12" height="96"/>
+                            <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="a7a-pq-j4K">
+                                <rect key="frame" x="318" y="578" width="35" height="102"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </box>
-                            <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="kbg-un-Ucm">
-                                <rect key="frame" x="1026" y="727" width="44" height="96"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H01-Rf-KE5">
+                                <rect key="frame" x="357" y="649" width="100" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Diagnose" id="OZm-PJ-vOD">
+                                    <font key="font" size="15" name="Roboto-Thin"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SbZ-UF-ZHb">
+                                <rect key="frame" x="357" y="591" width="100" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="XXX" id="TvG-Tl-E35">
+                                    <font key="font" size="50" name="Roboto-Thin"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="KCV-6b-C31">
+                                <rect key="frame" x="461" y="578" width="35" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </box>
+                            <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="bkS-d7-bUd">
+                                <rect key="frame" x="604" y="578" width="35" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </box>
+                            <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="vRZ-HK-uHt">
+                                <rect key="frame" x="747" y="578" width="35" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </box>
+                            <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="kWc-0X-405">
+                                <rect key="frame" x="890" y="578" width="35" height="102"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </box>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="73k-tg-Lho">
-                                <rect key="frame" x="1487" y="19" width="25" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <rect key="frame" x="1055" y="19" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="f8c-nP-18A">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -605,18 +614,6 @@ CA
                                     <segue destination="aXb-yg-SDc" kind="sheet" identifier="AddNewDataSegue" id="jom-W8-OJh"/>
                                 </connections>
                             </button>
-                            <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="HCL-k5-CqY">
-                                <rect key="frame" x="820" y="727" width="5" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </box>
-                            <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="jPh-gl-TEW">
-                                <rect key="frame" x="594" y="727" width="5" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </box>
-                            <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="rJL-wg-7lN">
-                                <rect key="frame" x="481" y="727" width="5" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </box>
                         </subviews>
                     </view>
                     <connections>
@@ -698,7 +695,7 @@ CA
                     </items>
                 </menu>
             </objects>
-            <point key="canvasLocation" x="75" y="1295.5"/>
+            <point key="canvasLocation" x="-53" y="1238"/>
         </scene>
         <!--Details View Controller-->
         <scene sceneID="gx2-Wc-UnQ">
@@ -808,7 +805,7 @@ CA
                 </viewController>
                 <customObject id="7Tl-9M-9MK" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1215" y="855"/>
+            <point key="canvasLocation" x="911" y="930"/>
         </scene>
         <!--Add New Data View Controller-->
         <scene sceneID="6ZO-LJ-QpT">
@@ -846,7 +843,7 @@ CA
                 </viewController>
                 <customObject id="MuL-wF-y1j" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1436" y="1463"/>
+            <point key="canvasLocation" x="1104" y="1435"/>
         </scene>
     </scenes>
     <resources>

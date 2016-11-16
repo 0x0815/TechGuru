@@ -35,6 +35,8 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
         super.viewDidLoad()
         statusBarItem.title = "TechGuru"
         tableView.focusRingType = NSFocusRingType.none
+        //let sendData = handleData()
+        //sendData.addNewData()
         countCases()
     }
 
