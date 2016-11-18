@@ -17,27 +17,11 @@
 		D246AC841DAD6F21008951E4 /* TechGuru.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D246AC821DAD6F21008951E4 /* TechGuru.xcdatamodeld */; };
 		D246AC861DAD6F21008951E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D246AC851DAD6F21008951E4 /* Assets.xcassets */; };
 		D246AC891DAD6F21008951E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D246AC871DAD6F21008951E4 /* Main.storyboard */; };
-		D246AC941DAD6F21008951E4 /* TechGuruTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D246AC931DAD6F21008951E4 /* TechGuruTests.swift */; };
-		D246AC9F1DAD6F21008951E4 /* TechGuruUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D246AC9E1DAD6F21008951E4 /* TechGuruUITests.swift */; };
 		D2A1CF551DB6CB5E00D34662 /* cases in Resources */ = {isa = PBXBuildFile; fileRef = D2A1CF541DB6CB5E00D34662 /* cases */; };
+		D2F826001DDD025A00D14EC5 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2F825FD1DDD025A00D14EC5 /* Roboto-Light.ttf */; };
+		D2F826011DDD025A00D14EC5 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2F825FE1DDD025A00D14EC5 /* Roboto-Regular.ttf */; };
+		D2F826021DDD025A00D14EC5 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2F825FF1DDD025A00D14EC5 /* Roboto-Thin.ttf */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		D246AC901DAD6F21008951E4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D246AC731DAD6F20008951E4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D246AC7A1DAD6F20008951E4;
-			remoteInfo = TechGuru;
-		};
-		D246AC9B1DAD6F21008951E4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D246AC731DAD6F20008951E4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D246AC7A1DAD6F20008951E4;
-			remoteInfo = TechGuru;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D20332601DC56FE800744858 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
@@ -52,31 +36,14 @@
 		D246AC851DAD6F21008951E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D246AC881DAD6F21008951E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D246AC8A1DAD6F21008951E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D246AC8F1DAD6F21008951E4 /* TechGuruTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TechGuruTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D246AC931DAD6F21008951E4 /* TechGuruTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechGuruTests.swift; sourceTree = "<group>"; };
-		D246AC951DAD6F21008951E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D246AC9A1DAD6F21008951E4 /* TechGuruUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TechGuruUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D246AC9E1DAD6F21008951E4 /* TechGuruUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechGuruUITests.swift; sourceTree = "<group>"; };
-		D246ACA01DAD6F21008951E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2A1CF541DB6CB5E00D34662 /* cases */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cases; sourceTree = "<group>"; };
+		D2F825FD1DDD025A00D14EC5 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		D2F825FE1DDD025A00D14EC5 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		D2F825FF1DDD025A00D14EC5 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D246AC781DAD6F20008951E4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D246AC8C1DAD6F21008951E4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D246AC971DAD6F21008951E4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -90,8 +57,6 @@
 			isa = PBXGroup;
 			children = (
 				D246AC7D1DAD6F21008951E4 /* TechGuru */,
-				D246AC921DAD6F21008951E4 /* TechGuruTests */,
-				D246AC9D1DAD6F21008951E4 /* TechGuruUITests */,
 				D246AC7C1DAD6F21008951E4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,8 +65,6 @@
 			isa = PBXGroup;
 			children = (
 				D246AC7B1DAD6F21008951E4 /* TechGuru.app */,
-				D246AC8F1DAD6F21008951E4 /* TechGuruTests.xctest */,
-				D246AC9A1DAD6F21008951E4 /* TechGuruUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,8 +72,9 @@
 		D246AC7D1DAD6F21008951E4 /* TechGuru */ = {
 			isa = PBXGroup;
 			children = (
-				D20FC9011DC928B4007C583A /* handleData.swift */,
+				D2F825FB1DDD00E100D14EC5 /* resources */,
 				D246AC801DAD6F21008951E4 /* ViewController.swift */,
+				D20FC9011DC928B4007C583A /* handleData.swift */,
 				D20FC8FF1DC8FDA0007C583A /* DetailsViewController.swift */,
 				D20FC8FD1DC8FA75007C583A /* SettingsViewController.swift */,
 				D20FC8FB1DC8EA8C007C583A /* AddNewDataViewController.swift */,
@@ -125,22 +89,22 @@
 			path = TechGuru;
 			sourceTree = "<group>";
 		};
-		D246AC921DAD6F21008951E4 /* TechGuruTests */ = {
+		D2F825FB1DDD00E100D14EC5 /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				D246AC931DAD6F21008951E4 /* TechGuruTests.swift */,
-				D246AC951DAD6F21008951E4 /* Info.plist */,
+				D2F825FC1DDD00EF00D14EC5 /* fonts */,
 			);
-			path = TechGuruTests;
+			name = resources;
 			sourceTree = "<group>";
 		};
-		D246AC9D1DAD6F21008951E4 /* TechGuruUITests */ = {
+		D2F825FC1DDD00EF00D14EC5 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
-				D246AC9E1DAD6F21008951E4 /* TechGuruUITests.swift */,
-				D246ACA01DAD6F21008951E4 /* Info.plist */,
+				D2F825FD1DDD025A00D14EC5 /* Roboto-Light.ttf */,
+				D2F825FE1DDD025A00D14EC5 /* Roboto-Regular.ttf */,
+				D2F825FF1DDD025A00D14EC5 /* Roboto-Thin.ttf */,
 			);
-			path = TechGuruUITests;
+			name = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,42 +127,6 @@
 			productReference = D246AC7B1DAD6F21008951E4 /* TechGuru.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D246AC8E1DAD6F21008951E4 /* TechGuruTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D246ACA61DAD6F21008951E4 /* Build configuration list for PBXNativeTarget "TechGuruTests" */;
-			buildPhases = (
-				D246AC8B1DAD6F21008951E4 /* Sources */,
-				D246AC8C1DAD6F21008951E4 /* Frameworks */,
-				D246AC8D1DAD6F21008951E4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D246AC911DAD6F21008951E4 /* PBXTargetDependency */,
-			);
-			name = TechGuruTests;
-			productName = TechGuruTests;
-			productReference = D246AC8F1DAD6F21008951E4 /* TechGuruTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		D246AC991DAD6F21008951E4 /* TechGuruUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D246ACA91DAD6F21008951E4 /* Build configuration list for PBXNativeTarget "TechGuruUITests" */;
-			buildPhases = (
-				D246AC961DAD6F21008951E4 /* Sources */,
-				D246AC971DAD6F21008951E4 /* Frameworks */,
-				D246AC981DAD6F21008951E4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D246AC9C1DAD6F21008951E4 /* PBXTargetDependency */,
-			);
-			name = TechGuruUITests;
-			productName = TechGuruUITests;
-			productReference = D246AC9A1DAD6F21008951E4 /* TechGuruUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -213,16 +141,6 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 65Q4MJ3SHR;
 						ProvisioningStyle = Automatic;
-					};
-					D246AC8E1DAD6F21008951E4 = {
-						CreatedOnToolsVersion = 8.0;
-						ProvisioningStyle = Automatic;
-						TestTargetID = D246AC7A1DAD6F20008951E4;
-					};
-					D246AC991DAD6F21008951E4 = {
-						CreatedOnToolsVersion = 8.0;
-						ProvisioningStyle = Automatic;
-						TestTargetID = D246AC7A1DAD6F20008951E4;
 					};
 				};
 			};
@@ -240,8 +158,6 @@
 			projectRoot = "";
 			targets = (
 				D246AC7A1DAD6F20008951E4 /* TechGuru */,
-				D246AC8E1DAD6F21008951E4 /* TechGuruTests */,
-				D246AC991DAD6F21008951E4 /* TechGuruUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -253,21 +169,10 @@
 			files = (
 				D2A1CF551DB6CB5E00D34662 /* cases in Resources */,
 				D246AC861DAD6F21008951E4 /* Assets.xcassets in Resources */,
+				D2F826021DDD025A00D14EC5 /* Roboto-Thin.ttf in Resources */,
+				D2F826011DDD025A00D14EC5 /* Roboto-Regular.ttf in Resources */,
+				D2F826001DDD025A00D14EC5 /* Roboto-Light.ttf in Resources */,
 				D246AC891DAD6F21008951E4 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D246AC8D1DAD6F21008951E4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D246AC981DAD6F21008951E4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,36 +194,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D246AC8B1DAD6F21008951E4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D246AC941DAD6F21008951E4 /* TechGuruTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D246AC961DAD6F21008951E4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D246AC9F1DAD6F21008951E4 /* TechGuruUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		D246AC911DAD6F21008951E4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D246AC7A1DAD6F20008951E4 /* TechGuru */;
-			targetProxy = D246AC901DAD6F21008951E4 /* PBXContainerItemProxy */;
-		};
-		D246AC9C1DAD6F21008951E4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D246AC7A1DAD6F20008951E4 /* TechGuru */;
-			targetProxy = D246AC9B1DAD6F21008951E4 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D246AC871DAD6F21008951E4 /* Main.storyboard */ = {
@@ -456,64 +332,6 @@
 			};
 			name = Release;
 		};
-		D246ACA71DAD6F21008951E4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = TechGuruTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.dontplayalone.TechGuruTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TechGuru.app/Contents/MacOS/TechGuru";
-			};
-			name = Debug;
-		};
-		D246ACA81DAD6F21008951E4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = TechGuruTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.dontplayalone.TechGuruTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TechGuru.app/Contents/MacOS/TechGuru";
-			};
-			name = Release;
-		};
-		D246ACAA1DAD6F21008951E4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = TechGuruUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.dontplayalone.TechGuruUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = TechGuru;
-			};
-			name = Debug;
-		};
-		D246ACAB1DAD6F21008951E4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = TechGuruUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.dontplayalone.TechGuruUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = TechGuru;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -531,24 +349,6 @@
 			buildConfigurations = (
 				D246ACA41DAD6F21008951E4 /* Debug */,
 				D246ACA51DAD6F21008951E4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D246ACA61DAD6F21008951E4 /* Build configuration list for PBXNativeTarget "TechGuruTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D246ACA71DAD6F21008951E4 /* Debug */,
-				D246ACA81DAD6F21008951E4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D246ACA91DAD6F21008951E4 /* Build configuration list for PBXNativeTarget "TechGuruUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D246ACAA1DAD6F21008951E4 /* Debug */,
-				D246ACAB1DAD6F21008951E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

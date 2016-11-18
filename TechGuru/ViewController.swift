@@ -21,23 +21,20 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     @IBOutlet var changeStateMenu: NSMenu!
     
     let statusBarItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
-    
-    var data: [DataModel] = [DataModel(status: "80", spnumber: "SP34004581", customername: "Hans Meier", mail: "test@test.de", phone: "015425468547", article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
-                             DataModel(status: "75", spnumber: "SP34004582", customername: "Hans Meier", mail: "test@test.de", phone: "015425468547",  article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
-                             DataModel(status: "70", spnumber: "SP34004583", customername: "Hans Meier", mail: "test@test.de", phone: "015425468547",  article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
-                             DataModel(status: "60", spnumber: "SP34004584", customername: "Hans Meier", mail: "test@test.de", phone: "015425468547",  article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
-                             DataModel(status: "20", spnumber: "SP34004585", customername: "Hans Meier", mail: "test@test.de", phone: "015425468547",  article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
-                             DataModel(status: "10", spnumber: "SP34004586", customername: "Hans Meier", mail: "test@test.de", phone: "015425468547",  article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
-                             DataModel(status: "1", spnumber: "SP34004587", customername: "Hans Meier", mail: "test@test.de", phone: "015425468547",  article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail"),
-                             DataModel(status: "1", spnumber: "SP34004588", customername: "Hans Meier", mail: "test@test.de", phone: "015425468547",  article: "MacBook Pro 15", dayin: "05.10.2016", errordescription: "Ist in die Toilette gefallen. Info lieber per Mail")]
+    let dataHandler = handleData()
+    var data: [DataModel] = []
+    var status = -1
+    var filter = "0"
+    var dataCount = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        data = dataHandler.getAllCasesAsTGDataModel()
+        dataCount = data.count
+        countCases()
         statusBarItem.title = "TechGuru"
         tableView.focusRingType = NSFocusRingType.none
-        //let sendData = handleData()
-        //sendData.addNewData()
-        countCases()
+        tableView.reloadData()
     }
 
     override var representedObject: Any? {
@@ -53,47 +50,50 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         let identifier = tableColumn?.identifier as NSString?
         
-        if (identifier == "status") {
-            let cell = tableView.make(withIdentifier: "status", owner: self) as! NSTableCellView
+            if (identifier == "status") {
+                let cell = tableView.make(withIdentifier: "status", owner: self) as! NSTableCellView
+                
+                if (self.data[row].status! == "1")  {
+                    cell.textField?.stringValue = "Neu"
+                } else if (self.data[row].status! == "10")  {
+                    cell.textField?.stringValue = "In Bearbeitung"
+                } else if (self.data[row].status! == "20")  {
+                    cell.textField?.stringValue = "In Diagnose"
+                } else if (self.data[row].status! == "60")  {
+                    cell.textField?.stringValue = "Wartend"
+                } else if (self.data[row].status! == "70")  {
+                    cell.textField?.stringValue = "Mail In"
+                } else if (self.data[row].status! == "75")  {
+                    cell.textField?.stringValue = "Carry In"
+                } else if (self.data[row].status! == "80")  {
+                    cell.textField?.stringValue = "Ausgabe"
+                } else if (self.data[row].status! == "90")  {
+                    cell.textField?.stringValue = "Abgeschlossen"
+                }
+                return cell
             
-            if (self.data[row].status! == "1")  {
-                cell.textField?.stringValue = "Neu"
-            } else if (self.data[row].status! == "10")  {
-                cell.textField?.stringValue = "In Bearbeitung"
-            } else if (self.data[row].status! == "20")  {
-                cell.textField?.stringValue = "In Diagnose"
-            } else if (self.data[row].status! == "60")  {
-                cell.textField?.stringValue = "Wartend"
-            } else if (self.data[row].status! == "70")  {
-                cell.textField?.stringValue = "Mail In"
-            } else if (self.data[row].status! == "75")  {
-                cell.textField?.stringValue = "Carry In"
-            } else if (self.data[row].status! == "80")  {
-                cell.textField?.stringValue = "Ausgabe"
+            }else if (identifier == "spnumber"){
+                let cell = tableView.make(withIdentifier: "spnumber", owner: self) as! NSTableCellView
+                cell.textField?.stringValue = self.data[row].spnumber!
+                return cell
+            }else if (identifier == "customername"){
+                let cell = tableView.make(withIdentifier: "customername", owner: self) as! NSTableCellView
+                cell.textField?.stringValue = self.data[row].customername!
+                return cell
+            }else if (identifier == "article"){
+                let cell = tableView.make(withIdentifier: "article", owner: self) as! NSTableCellView
+                cell.textField?.stringValue = self.data[row].article!
+                return cell
+            }else if (identifier == "errordescription"){
+                let cell = tableView.make(withIdentifier: "errordescription", owner: self) as! NSTableCellView
+                cell.textField?.stringValue = self.data[row].errordescription!
+                return cell
+            }else if (identifier == "dayin"){
+                let cell = tableView.make(withIdentifier: "dayin", owner: self) as! NSTableCellView
+                cell.textField?.stringValue = self.data[row].dayin!
+                return cell
             }
-            return cell
-        }else if (identifier == "spnumber"){
-            let cell = tableView.make(withIdentifier: "spnumber", owner: self) as! NSTableCellView
-            cell.textField?.stringValue = self.data[row].spnumber!
-            return cell
-        }else if (identifier == "customername"){
-            let cell = tableView.make(withIdentifier: "customername", owner: self) as! NSTableCellView
-            cell.textField?.stringValue = self.data[row].customername!
-            return cell
-        }else if (identifier == "article"){
-            let cell = tableView.make(withIdentifier: "article", owner: self) as! NSTableCellView
-            cell.textField?.stringValue = self.data[row].article!
-            return cell
-        }else if (identifier == "errordescription"){
-            let cell = tableView.make(withIdentifier: "errordescription", owner: self) as! NSTableCellView
-            cell.textField?.stringValue = self.data[row].errordescription!
-            return cell
-        }else if (identifier == "dayin"){
-            let cell = tableView.make(withIdentifier: "dayin", owner: self) as! NSTableCellView
-            cell.textField?.stringValue = self.data[row].dayin!
-            return cell
-        }
-        return nil
+            return nil
     }
     
     func tableView(_ tableView: NSTableView, didAdd rowView: NSTableRowView, forRow row: Int) {
@@ -125,6 +125,10 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
         let clickedRow = tableView.clickedRow
         
         if (clickedRow != -1) {
+            dataHandler.updateRow(spNumber: data[clickedRow].spnumber!, status: "1")
+            data[clickedRow].status = "1"
+            countCases()
+            tableView.reloadData()
         }
     }
     
@@ -132,6 +136,10 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
         let clickedRow = tableView.clickedRow
         
         if (clickedRow != -1) {
+            dataHandler.updateRow(spNumber: data[clickedRow].spnumber!, status: "10")
+            data[clickedRow].status = "10"
+            countCases()
+            tableView.reloadData()
         }
     }
     
@@ -254,6 +262,86 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
             }
         }
     }
+
+    @IBAction func refreshView(_ sender: Any) {
+        data = dataHandler.getAllCasesAsTGDataModel(status: status)
+        dataCount = data.count
+        countCases()
+        tableView.reloadData()
+    }
+    
+    @IBAction func showAllCases(_ sender: Any) {
+        status = -1
+        data = dataHandler.getAllCasesAsTGDataModel(status: status)
+        dataCount = data.count
+        countCases()
+        tableView.reloadData()
+    }
+    
+    @IBAction func showOnlyNewCases(_ sender: Any) {
+        status = 1
+        data = dataHandler.getAllCasesAsTGDataModel(status: status)
+        dataCount = data.count
+        countCases()
+        tableView.reloadData()
+    }
+    
+    @IBAction func showOnlyInProgressCases(_ sender: Any) {
+        status = 10
+        data = dataHandler.getAllCasesAsTGDataModel(status: status)
+        dataCount = data.count
+        countCases()
+        tableView.reloadData()
+    }
+    
+    @IBAction func showOnlyInDiagnisticCases(_ sender: Any) {
+        status = 20
+        data = dataHandler.getAllCasesAsTGDataModel(status: status)
+        dataCount = data.count
+        countCases()
+        tableView.reloadData()
+    }
+    
+    @IBAction func showOnlyWaitingCases(_ sender: Any) {
+        status = 60
+        data = dataHandler.getAllCasesAsTGDataModel(status: status)
+        dataCount = data.count
+        countCases()
+        tableView.reloadData()
+    }
+    
+    @IBAction func showOnlyCarryInCases(_ sender: Any) {
+        status = 70
+        data = dataHandler.getAllCasesAsTGDataModel(status: status)
+        dataCount = data.count
+        countCases()
+        tableView.reloadData()
+    }
+    
+    @IBAction func showOnlyMailInCases(_ sender: Any) {
+        status = 75
+        data = dataHandler.getAllCasesAsTGDataModel(status: status)
+        dataCount = data.count
+        countCases()
+        tableView.reloadData()
+    }
+    
+    @IBAction func showOnlyReadyCases(_ sender: Any) {
+        status = 80
+        data = dataHandler.getAllCasesAsTGDataModel(status: status)
+        dataCount = data.count
+        countCases()
+        tableView.reloadData()
+    }
+    
+    @IBAction func showOnlyDoneCases(_ sender: Any) {
+        status = 90
+        data = dataHandler.getAllCasesAsTGDataModel(status: status)
+        dataCount = data.count
+        countCases()
+        tableView.reloadData()
+    }
+    
     
     func countCases(){
         var new: Int = 0
