@@ -89,8 +89,12 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
                 cell.textField?.stringValue = self.data[row].errordescription!
                 return cell
             }else if (identifier == "dayin"){
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "dd.MM.yyyy"
                 let cell = tableView.make(withIdentifier: "dayin", owner: self) as! NSTableCellView
-                cell.textField?.stringValue = self.data[row].dayin!
+                //cell.textField?.stringValue = self.data[row].dayin!
+                let date = NSDate(timeIntervalSince1970: Double(self.data[row].dayin!)! + 504921600)
+                cell.textField?.stringValue = dateFormatter.string(from: date as Date)
                 return cell
             }
             return nil
@@ -147,6 +151,10 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
         let clickedRow = tableView.clickedRow
         
         if (clickedRow != -1) {
+            dataHandler.updateRow(spNumber: data[clickedRow].spnumber!, status: "20")
+            data[clickedRow].status = "20"
+            countCases()
+            tableView.reloadData()
         }
     }
     
@@ -172,6 +180,12 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
             service?.recipients = [recipients!]
             service?.subject = "Kostenvoranschlag - Referenz: " + spNumber!
             service?.perform(withItems: [body])
+            
+            dataHandler.updateRow(spNumber: data[clickedRow].spnumber!, status: "60")
+            data[clickedRow].status = "60"
+            countCases()
+            tableView.reloadData()
+            
         }
     }
     
@@ -197,6 +211,11 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
             service?.recipients = [recipients!]
             service?.subject = "Find My iPhone ist noch aktiv - Referenz: " + spNumber!
             service?.perform(withItems: [body])
+            
+            dataHandler.updateRow(spNumber: data[clickedRow].spnumber!, status: "60")
+            data[clickedRow].status = "60"
+            countCases()
+            tableView.reloadData()
         }
     }
     
@@ -222,27 +241,56 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
             service?.recipients = [recipients!]
             service?.subject = "Der Pin ihres iPhones wird benötigt - Referenz: " + spNumber!
             service?.perform(withItems: [body])
+            
+            dataHandler.updateRow(spNumber: data[clickedRow].spnumber!, status: "60")
+            data[clickedRow].status = "60"
+            countCases()
+            tableView.reloadData()
         }
     }
     
     @IBAction func changeStateToCarryIn(_ sender: Any) {
         let clickedRow = tableView.clickedRow
         
-        if clickedRow != -1 {
+        if (clickedRow != -1) {
+            dataHandler.updateRow(spNumber: data[clickedRow].spnumber!, status: "75")
+            data[clickedRow].status = "75"
+            countCases()
+            tableView.reloadData()
         }
     }
     
     @IBAction func changeStateToMailIn(_ sender: Any) {
         let clickedRow = tableView.clickedRow
         
-        if clickedRow != -1 {
+        if (clickedRow != -1) {
+            dataHandler.updateRow(spNumber: data[clickedRow].spnumber!, status: "70")
+            data[clickedRow].status = "70"
+            countCases()
+            tableView.reloadData()
         }
     }
     
     @IBAction func changeStateToDone(_ sender: Any) {
         let clickedRow = tableView.clickedRow
         
-        if clickedRow != -1 {
+        if (clickedRow != -1) {
+            dataHandler.updateRow(spNumber: data[clickedRow].spnumber!, status: "80")
+            data[clickedRow].status = "80"
+            countCases()
+            tableView.reloadData()
+        }
+    }
+    
+    @IBAction func changeStateToComplete(_ sender: Any) {
+        let clickedRow = tableView.clickedRow
+        
+        if (clickedRow != -1) {
+            dataHandler.updateRow(spNumber: data[clickedRow].spnumber!, status: "90")
+            //data[clickedRow].status = "90"
+            data.remove(at: clickedRow)
+            countCases()
+            tableView.reloadData()
         }
     }
     
@@ -311,7 +359,7 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     }
     
     @IBAction func showOnlyCarryInCases(_ sender: Any) {
-        status = 70
+        status = 75
         data = dataHandler.getAllCasesAsTGDataModel(status: status)
         dataCount = data.count
         countCases()
@@ -319,7 +367,7 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     }
     
     @IBAction func showOnlyMailInCases(_ sender: Any) {
-        status = 75
+        status = 70
         data = dataHandler.getAllCasesAsTGDataModel(status: status)
         dataCount = data.count
         countCases()
@@ -361,9 +409,9 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
                 diag += 1
             } else if (item.status == "60") {
                 waiting += 1
-            }else if (item.status == "70") {
+            }else if (item.status == "75") {
                 carryin += 1
-            } else if (item.status == "75") {
+            } else if (item.status == "70") {
                 mailin += 1
             }else if (item.status == "80") {
                 done += 1

@@ -67,6 +67,7 @@ class handleData {
         let url = URL(string:"http://aca.dontplayalone.de/update.php?spnr=\(spNumber)&status=\(status)")
         do {
             let apiData = try Data(contentsOf: url!)
+            print(apiData)
         }catch let error as NSError{
             print(error.localizedDescription)
         }
