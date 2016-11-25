@@ -21,4 +21,10 @@ class AddNewDataViewController: NSViewController {
         sendData.addNewDataHTML(postData: addNewDataTextfield.stringValue)
         self.dismiss(sender)
     }
+    
+    override func viewDidDisappear() {
+        let viewController = ViewController()
+        viewController.updateView()
+        //update table
+    }
 }

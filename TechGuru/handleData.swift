@@ -10,11 +10,10 @@ import Foundation
 
 class handleData {
     func addNewDataHTML(postData: String) {
-        var postString = "csv=" + postData.replacingOccurrences(of: "\"", with: "").replacingOccurrences(of: "&", with: " u. ")
-        
+        var postString = "csv=" + postData.addingPercentEncoding(withAllowedCharacters: .alphanumerics)!
+        postString = postString.replacingOccurrences(of: "¶", with: "")
         var request = URLRequest(url: URL(string: "http://aca.dontplayalone.de/connect.php")!)
         request.httpMethod = "POST"
-        postString = postString.removingPercentEncoding!
         request.httpBody = postString.data(using: .utf8)
             
         let task = URLSession.shared.dataTask(with: request) {

@@ -23,6 +23,7 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     let statusBarItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
     let dataHandler = handleData()
     var data: [DataModel] = []
+    let pasteboard = NSPasteboard.general()
     var status = -1
     var filter = "0"
     var dataCount = 0
@@ -33,14 +34,24 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
         dataCount = data.count
         countCases()
         statusBarItem.title = "TechGuru"
+        Timer.scheduledTimer(timeInterval: 30, target: self, selector: #selector(updateView), userInfo: nil, repeats: true)
+        //updateTimer.fire()
         tableView.focusRingType = NSFocusRingType.none
         tableView.reloadData()
+    }
+    
+    override func viewWillDisappear() {
+        print("jo")
     }
 
     override var representedObject: Any? {
         didSet {
         // Update the view, if already loaded.
         }
+    }
+    
+    override var acceptsFirstResponder: Bool{
+        return true
     }
     
     func numberOfRows(in tableView: NSTableView) -> Int {
@@ -390,6 +401,13 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
         tableView.reloadData()
     }
     
+    func updateView() {
+        data = dataHandler.getAllCasesAsTGDataModel(status: status)
+        dataCount = data.count
+        countCases()
+        tableView.reloadData()
+        tableView.deselectRow(tableView.selectedRow)
+    }
     
     func countCases(){
         var new: Int = 0
