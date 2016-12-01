@@ -29,13 +29,12 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     var dataCount = 0
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad()        
         data = dataHandler.getAllCasesAsTGDataModel()
         dataCount = data.count
         countCases()
         statusBarItem.title = "TechGuru"
         Timer.scheduledTimer(timeInterval: 30, target: self, selector: #selector(updateView), userInfo: nil, repeats: true)
-        //updateTimer.fire()
         tableView.focusRingType = NSFocusRingType.none
         tableView.reloadData()
     }
@@ -104,7 +103,7 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
                 dateFormatter.dateFormat = "dd.MM.yyyy"
                 let cell = tableView.make(withIdentifier: "dayin", owner: self) as! NSTableCellView
                 //cell.textField?.stringValue = self.data[row].dayin!
-                let date = NSDate(timeIntervalSince1970: Double(self.data[row].dayin!)! + 504921600)
+                let date = NSDate(timeIntervalSince1970: Double(self.data[row].dayin!)!)
                 cell.textField?.stringValue = dateFormatter.string(from: date as Date)
                 return cell
             }
@@ -318,6 +317,12 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
                     destinationDetailViewController.customerPhone = data[clickedRow].phone!
                     destinationDetailViewController.errordescription = data[clickedRow].errordescription!
                 }
+            }
+        }
+        
+        if segue.identifier == "AddNewDataSegue" {
+            if let destinationDetailViewController = segue.destinationController as? AddNewDataViewController {
+                destinationDetailViewController.mainViewController = self
             }
         }
     }

@@ -11,6 +11,7 @@ import Cocoa
 class AddNewDataViewController: NSViewController {
     
     @IBOutlet weak var addNewDataTextfield: NSTextField!
+    var mainViewController = ViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +24,7 @@ class AddNewDataViewController: NSViewController {
     }
     
     override func viewDidDisappear() {
-        let viewController = ViewController()
-        viewController.updateView()
+        mainViewController.updateView()
         //update table
     }
 }
